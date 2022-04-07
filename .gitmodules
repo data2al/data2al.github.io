@@ -1,0 +1,11 @@
+[submodule "themes/hugo-theme-shell"]
+	path = themes/hugo-theme-shell
+	url = https://github.com/Yukuro/hugo-theme-shell.git
+[submodule "datamanju.github.io"]
+	path = datamanju.github.io
+	url = https://github.com/data2al/datamanju.github.io
+	branch = main
+[submodule "public"]
+	path = public
+	url = https://github.com/data2al/datamanju.github.io
+	branch = main
