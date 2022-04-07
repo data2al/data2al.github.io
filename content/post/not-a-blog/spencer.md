@@ -2,7 +2,7 @@
 03/??/2022
 
 {{< rawhtml >}}
-  <img src="/not-a-blog/images/spencer.png" 
+  <img src="https://github.com/data2al/media_files/blob/main/spencer.png?raw=true" 
      width="530" />
 {{< /rawhtml >}}
 

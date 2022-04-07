@@ -2,7 +2,7 @@
 04/??/2022
 
 {{< rawhtml >}}
-  <img src="/not-a-blog/images/elden-ring.gif" 
+  <img src="https://github.com/data2al/media_files/blob/main/elden-ring.gif?raw=true" 
      width="530" />
 {{< /rawhtml >}}
 
