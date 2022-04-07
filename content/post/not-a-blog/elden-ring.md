@@ -3,7 +3,7 @@
 
 {{< rawhtml >}}
   <img src="https://github.com/data2al/media_files/blob/main/elden-ring.gif?raw=true" 
-     width="530" />
+     width="100%" />
 {{< /rawhtml >}}
 
 As I woke up at the Site of Lost Grace, I peeked across the half-abandoned battlefield in the hill valleys below me. I could see the Knights and Soldiers of the Golden Order patrolling the area. Their slow movements betray their ill-state of fatigue. 

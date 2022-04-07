@@ -63,7 +63,7 @@ title = 'Welcome to Data2al'
 
   [Params.Tree]
   use = true
-  folderName = "posts"
+  folderName = "my_activity"
   # Note: ["ACTIVITY", "URL or PATH TO YOUR MARKDOWN FILE"]
   files = [ 
     ["Salesforce", "/post/salesforce.md"],

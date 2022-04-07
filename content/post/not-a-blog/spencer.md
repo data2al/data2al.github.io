@@ -3,7 +3,7 @@
 
 {{< rawhtml >}}
   <img src="https://github.com/data2al/media_files/blob/main/spencer.png?raw=true" 
-     width="530" />
+     width="100%" />
 {{< /rawhtml >}}
 
 As the chill wind swept through the night, the trees rattled with the rhythmic tapping of the cold rain outside. I sat at my desk, brooding in the darkness, waiting for the title "Spencer" to appear on my computer screen. "Spencer" is a film that showcases an exaggerated version of Princess Diana's Christmas dinner with the royal family, where she confronts her husband about his infidelity.
