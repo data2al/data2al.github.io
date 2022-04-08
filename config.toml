@@ -54,7 +54,9 @@ title = 'Welcome to Data2al'
   description = """
   Hi I am Alan!
   Nice to meet you!
-  
+  I'm a data consultant with 7 years of industry experience!
+  For business enquiries, please add me on linkedin https://www.linkedin.com/in/alan-l-b8920b66/
+
   """
 
   # Note: If you want to use a Markdown file, you can use the following
@@ -67,5 +69,6 @@ title = 'Welcome to Data2al'
   # Note: ["ACTIVITY", "URL or PATH TO YOUR MARKDOWN FILE"]
   files = [ 
     ["Salesforce", "/post/salesforce.md"],
-    ["Not a Blog", "/post/not-a-blog.md"],
+    ["Certifications", "/post/certification-goals.md"],
+    ["Not a Blog", "/post/not-a-blog.md"]
   ]

@@ -8,4 +8,11 @@
 #### [Using AI in Business](/post/salesforce/using-ai-in-business/)
 &nbsp;
 ## B-Z
+### Salesforce Admin
 #### [Salesforce Platform Basics](/post/salesforce/salesforce-platform-basics/)
+#### [Data Modeling](/post/salesforce/data-modeling/)
+#### [Data Management](/post/salesforce/data-management/)
+#### [Lightning Experience](/post/salesforce/lightining-experience/)
+#### [Mobile App](/post/salesforce/mobile-app/)
+#### [User Engagement](/post/salesforce/user-engagement/)
+#### [Reports and Dashboards for Lightning Experience](/post/salesforce/reports-dashboards/)
