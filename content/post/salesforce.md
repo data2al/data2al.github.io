@@ -8,3 +8,4 @@
 #### [Using AI in Business](/post/salesforce/using-ai-in-business/)
 &nbsp;
 ## B-Z
+#### [Salesforce Platform Basics](/post/salesforce/salesforce-platform-basics/)
