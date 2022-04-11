@@ -22,7 +22,8 @@ For those of you who wish to learn more, "KiteTales & Flex" has a youtube series
      width="100%" />
 </a>
 {{< /rawhtml >}}
-
-
-
----
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;

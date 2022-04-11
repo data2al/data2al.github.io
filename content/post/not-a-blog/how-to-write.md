@@ -14,3 +14,8 @@ When you're writing articles, write them in a reverse pyramid. You do this, so w
 2. Describe the most important things you have to say
 3. You follow up with the supporting details
 4. Finally, sum up by telling readers what you wrote again
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
