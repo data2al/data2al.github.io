@@ -8,12 +8,14 @@
 
 Failure is the foundation of success. Success is the lurking-place of failure.
 
-When you're writing articles, write them in a reverse pyramid. You do this, so when the editor is editing, he can cut from the bottom up when you're running against a deadline.
+When you're writing articles, write them in reverse pyramid. That way when the editor is editing, he can cut from the bottom up when you're running against a deadline.
 
-1. You always start with the conclusion
-2. Describe the most important things you have to say
-3. You follow up with the supporting details
-4. Finally, sum up by telling readers what you wrote again
+Some other writing tips include:
+
+1. Always start with the conclusion;
+2. Describe the most important things you have to say;
+3. Follow up with the supporting details;
+4. Sum up by telling readers what you wrote again.
 &nbsp;
 &nbsp;
 &nbsp;
