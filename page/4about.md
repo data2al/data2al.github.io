@@ -2,33 +2,18 @@
 layout: page
 title: About
 permalink: /about/
-icon: heart
+icon: star
 type: page
 ---
 
 * content
 {:toc}
 
-## 关于我
+<a href= "https://www.linkedin.com/in/alan-l-b8920b66" ><img src="\img\profile.jpg" alt="irl_profile"></a>
+<br>Hello! I’m a Data Engineer passionate about helping businesses leverage data to achieve their goals. I have hands-on experience building ETL/ELT pipelines and analyzing data using SQL and Python. My expertise includes data visualization and analytics tools such as Microsoft Power BI, Apache Superset, Domo, Snowflake, Salesforce CRMA, and Tableau.
+              
 
-<!-- <iframe src="https://githubbadge.appspot.com/gaohaoyang?s=1" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe> -->
+## Reach out to me
 
-
-
-## 联系我
-
-* GitHub：[Gaohaoyang](https://github.com/Gaohaoyang)
-* email：gaohaoyang126@126.com
-* [Weibo](http://weibo.com/3115521wh)
-* [知乎](https://www.zhihu.com/people/gaohaoyang)
-* [Facebook](https://www.facebook.com/gaohaoyang.water)
-* [豆瓣](https://www.douban.com/people/42525035/)
-* [豆瓣音乐人-浩阳的小站](https://site.douban.com/haoyangaiyinyue/)
-
-## 友情链接
-
-[羡辙杂俎](http://zhangwenli.com/blog) \| [Anotherhome](https://www.anotherhome.net) \| [Reverland](http://reverland.org/) \| [ZhiLi](http://lizhipower.github.io/) \| [Simmer](http://simmer-jun.github.io/) \| [awthink](http://awthink.net/) \| [Aralic](http://aralic.github.io/) \| [zchen9](http://www.chen9.info/) \| [wuhuaji](http://wuhuaji.me/) \| [lisheng](http://www.lishengcn.cn/) \| [薛彬XueBin](http://axuebin.com/blog/) \| [TBOOX](http://www.tboox.org/cn/) \|  [Ling](http://linglinyp.com/)
-
-## Comments
-
-{% include comments.html %}
+* GitHub：[data2al](https://github.com/data2al)
+* [Linkedin](https://www.linkedin.com/in/alan-l-b8920b66/)
