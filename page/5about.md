@@ -1,0 +1,19 @@
+---
+layout: page
+title: About
+permalink: /about/
+icon: star
+type: page
+---
+
+* content
+{:toc}
+
+<a href= "https://www.linkedin.com/in/alan-l-b8920b66" ><img src="\img\profile.jpg" alt="irl_profile"></a>
+<br>Hello! I’m a Data Engineer passionate about helping businesses leverage data to achieve their goals. I have hands-on experience building ETL/ELT pipelines and analyzing data using SQL and Python. My expertise includes data visualization and analytics tools such as Microsoft Power BI, Apache Superset, Domo, Snowflake, Salesforce CRMA, and Tableau.
+              
+
+## Reach out to me
+
+* GitHub：[data2al](https://github.com/data2al)
+* [Linkedin](https://www.linkedin.com/in/alan-l-b8920b66/)
