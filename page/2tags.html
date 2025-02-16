@@ -27,7 +27,6 @@ type: page
                 </time>
                 <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 
-                {% include category.html %}
                 {% include tag.html %}
             </li>
           {% endfor %}
