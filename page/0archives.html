@@ -31,7 +31,8 @@ type: page
                 {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
                 </time>
                 <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                
+
+                {% include category.html %}
                 {% include tag.html %}
             </li>
 
@@ -60,7 +61,8 @@ type: page
                         {% endfor %}
                 </ul>
             </div>
-
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
         </div>
     </div>
 </div>
