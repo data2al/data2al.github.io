@@ -17,3 +17,9 @@ type: page
 
 * GitHub：[data2al](https://github.com/data2al)
 * [Linkedin](https://www.linkedin.com/in/alan-l-b8920b66/)
+
+## My Cert Plan
+1. Snowflake Advanced - Data Engineer
+2. dbt Analytics Engineering Certification Exam
+3. Snowflake Advanced - Data Science
+4. Databricks Data Engineering Professional
