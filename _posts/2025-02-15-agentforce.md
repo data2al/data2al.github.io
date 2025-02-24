@@ -30,7 +30,7 @@ In the example below, the agent interprets the users request to report an advers
 - Planning/orchestration
 - Action invocation
 
-![agentforce_medicine](/img/blog/agentforce_medicine.jpg)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![agentforce_medicine](/img/blog/agentforce_medicine.jpg)
 
 To better understand the Atlas Reasoning Engine, get some hands-on experience by clicking the link to the agentforce trailhead: [https://trailhead.salesforce.com/agentforce](https://trailhead.salesforce.com/content/learn/projects/quick-start-build-your-first-agent-with-agentforce/configure-an-agentforce-service-agent)
 
@@ -40,4 +40,7 @@ To better understand the Atlas Reasoning Engine, get some hands-on experience by
 
 The "running user" provides service agents with data access and Apex class permissions, allowing them to perform tasks efficiently. Unlike Einstein Copilot, service agents rely on this predefined user because they function independently of the logged-in user's context. The Atlas Reasoning Engine maintains conversation context by storing key details in memory. This enables it to retrieve previously mentioned information, such as a medicine name, without requiring the user to repeat it, ensuring a smooth and efficient interaction.
 
-![agentforce_medicine](/img/blog/salesforceai_architect.jpg)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![agentforce_medicine](/img/blog/salesforceai_architect.jpg)
+
+\
+&nbsp;
