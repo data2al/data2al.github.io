@@ -11,7 +11,7 @@ author: Alan
 
 AgentForce is a cutting-edge platform from Salesforce that enables businesses to create autonomous AI agents. These agents collaborate with human employees to enhance customer experiences and optimize operations.
 
-Key Capabilities:
+#### Key Capabilities
 1. Responds to inquiries, executes tasks, and follows instructions efficiently.
 2. Operates across multiple Salesforce channels, assisting with daily workflows and communication.
 3. Adapts to diverse business needs while maintaining compliance with organizational frameworks.
@@ -20,7 +20,7 @@ Key Capabilities:
 
 --- 
 
-# Atlas Reasoning Engine
+### Atlas Reasoning Engine
 
 Atlas reasoning engine is designed to simulate human-like thought process within Salesforce, it is the "brain" behind AI agents, which can make decisions, take actions, and continuously learn - in real time.
 
@@ -36,7 +36,7 @@ To better understand the Atlas Reasoning Engine, get some hands-on experience by
 
 --- 
 
-# What makes Agentforce special?
+### What makes Agentforce special?
 
 The "running user" provides service agents with data access and Apex class permissions, allowing them to perform tasks efficiently. Unlike Einstein Copilot, service agents rely on this predefined user because they function independently of the logged-in user's context. The Atlas Reasoning Engine maintains conversation context by storing key details in memory. This enables it to retrieve previously mentioned information, such as a medicine name, without requiring the user to repeat it, ensuring a smooth and efficient interaction.
 
