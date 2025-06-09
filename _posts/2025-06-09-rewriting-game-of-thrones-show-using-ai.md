@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Rewriting Game of Thrones Starting from end of Season 5 using AI"
+title:  "Rewriting Game of Thrones from Season 5 using AI"
 categories: AI
 tags:  AI
 author: Alan
@@ -10,14 +10,14 @@ author: Alan
 {:toc}
 
 First Ser Barristan Selmy will be alive in the rewrite:
-1. Mentor Role for Tyrion and Dany
-Barristan’s counsel can add depth to both Daenerys and Tyrion’s characters. He can mentor Tyrion on leadership beyond politics and help Daenerys navigate the responsibilities of ruling—not just conquering.
+    1. Mentor Role for Tyrion and Dany
+    Barristan’s counsel can add depth to both Daenerys and Tyrion’s characters. He can mentor Tyrion on leadership beyond politics and help Daenerys navigate the responsibilities of ruling—not just conquering.
 
-2. Narrative Continuity and Emotional Weight
-In the original story, his death was a sudden loss of a key loyalist. Keeping him alive allows for ongoing tension, drama, and emotional stakes, especially during battles against the Sons of the Harpy and later political struggles.
+    2. Narrative Continuity and Emotional Weight
+    In the original story, his death was a sudden loss of a key loyalist. Keeping him alive allows for ongoing tension, drama, and emotional stakes, especially during battles against the Sons of the Harpy and later political struggles.
 
-3. Balance to Grey Worm and Unsullied
-Barristan represents Westerosi knighthood and tradition, while Grey Worm embodies the uncompromising military discipline of the Unsullied. This balance enriches the depiction of Daenerys’s diverse support base.
+    3. Balance to Grey Worm and Unsullied
+    Barristan represents Westerosi knighthood and tradition, while Grey Worm embodies the uncompromising military discipline of the Unsullied. This balance enriches the depiction of Daenerys’s diverse support base.
 
 In short, Barristan’s survival adds honor, wisdom, and strategic strength to your story—helping to ground Daenerys’s arc and making her rise more believable and compelling.
 
@@ -25,25 +25,25 @@ In short, Barristan’s survival adds honor, wisdom, and strategic strength to y
 Season 5, Episode 9 – “The Dance of Dragons” (Rewritten)
 
 Daenerys’ Arena Escape:
-As chaos erupts in the fighting pits, Drogon arrives. Daenerys mounts him and flies—not away into exile, but just beyond the city walls to a secluded beachside plateau where she can recover. Jorah and Daario follow on foot, while Grey Worm and Ser Barristan Selmy hold the city. Selmy's survival and military brilliance rally Meereen’s defenders. They drive the Sons of the Harpy into hiding.
+    As chaos erupts in the fighting pits, Drogon arrives. Daenerys mounts him and flies—not away into exile, but just beyond the city walls to a secluded beachside plateau where she can recover. Jorah and Daario follow on foot, while Grey Worm and Ser Barristan Selmy hold the city. Selmy's survival and military brilliance rally Meereen’s defenders. They drive the Sons of the Harpy into hiding.
 
 
 Season 5, Episode 10 – “Mother’s Justice” (New Arc)
 
 Return to Meereen:
-Drogon eventually allows Daenerys to return. With Ser Barristan alive, she regains control quickly. Tyrion helps coordinate a brutal crackdown. No negotiations.
+    Drogon eventually allows Daenerys to return. With Ser Barristan alive, she regains control quickly. Tyrion helps coordinate a brutal crackdown. No negotiations.
 
 Tyrion’s Retribution:
-Tyrion uncovers the identities of the Harpy leaders (mostly powerful Meereenese noble families). Using the Queen’s authority, he confiscates their estates and redistributes the wealth to freedmen and trade guilds. With Selmy's aid, he enforces martial law in Meereen and gradually in Yunkai and Astapor.
+    Tyrion uncovers the identities of the Harpy leaders (mostly powerful Meereenese noble families). Using the Queen’s authority, he confiscates their estates and redistributes the wealth to freedmen and trade guilds. With Selmy's aid, he enforces martial law in Meereen and gradually in Yunkai and Astapor.
 
 
 Season 6 – “The Dragon Queen’s Republic”
 
 Conquest Through Infrastructure:
-Instead of burning cities, Daenerys uses her dragons sparingly and strategically. Tyrion and Missandei help her establish a new economic alliance across Slaver’s Bay. She renames it The Bay of Dragons. Selmy establishes an elite guard made up of former Unsullied and ex-slaves loyal to Dany.
+    Instead of burning cities, Daenerys uses her dragons sparingly and strategically. Tyrion and Missandei help her establish a new economic alliance across Slaver’s Bay. She renames it The Bay of Dragons. Selmy establishes an elite guard made up of former Unsullied and ex-slaves loyal to Dany.
 
 The Sons of the Harpy:
-Tyrion launches a campaign of infiltration and assassination, exploiting their networks and systematically dismantling them. He employs Varys and spymasters trained from the freedmen’s ranks. The Harpy resistance collapses by mid-season.
+    Tyrion launches a campaign of infiltration and assassination, exploiting their networks and systematically dismantling them. He employs Varys and spymasters trained from the freedmen’s ranks. The Harpy resistance collapses by mid-season.
 
 
 Season 7 – “The Rise of the Bay” (5-Year Timeskip)
