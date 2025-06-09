@@ -10,13 +10,14 @@ author: Alan
 {:toc}
 
 First Ser Barristan Selmy will be alive in the rewrite:
-    1. Mentor Role for Tyrion and Dany
+
+1. Mentor Role for Tyrion and Dany
     Barristan’s counsel can add depth to both Daenerys and Tyrion’s characters. He can mentor Tyrion on leadership beyond politics and help Daenerys navigate the responsibilities of ruling—not just conquering.
 
-    2. Narrative Continuity and Emotional Weight
+2. Narrative Continuity and Emotional Weight
     In the original story, his death was a sudden loss of a key loyalist. Keeping him alive allows for ongoing tension, drama, and emotional stakes, especially during battles against the Sons of the Harpy and later political struggles.
 
-    3. Balance to Grey Worm and Unsullied
+3. Balance to Grey Worm and Unsullied
     Barristan represents Westerosi knighthood and tradition, while Grey Worm embodies the uncompromising military discipline of the Unsullied. This balance enriches the depiction of Daenerys’s diverse support base.
 
 In short, Barristan’s survival adds honor, wisdom, and strategic strength to your story—helping to ground Daenerys’s arc and making her rise more believable and compelling.
@@ -44,6 +45,9 @@ Conquest Through Infrastructure:
 
 The Sons of the Harpy:
     Tyrion launches a campaign of infiltration and assassination, exploiting their networks and systematically dismantling them. He employs Varys and spymasters trained from the freedmen’s ranks. The Harpy resistance collapses by mid-season.
+
+
+
 
 
 Season 7 – “The Rise of the Bay” (5-Year Timeskip)
