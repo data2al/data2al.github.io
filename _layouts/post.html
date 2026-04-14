@@ -4,27 +4,29 @@ layout: default
 
 <div class="page clearfix" post>
     <div class="left">
-        <h1>{{page.title}}</h1>
+        <div class="post-hero">
+            <p class="eyebrow">Concept note</p>
+            <h1>{{page.title}}</h1>
+            {% if page.summary %}
+            <p class="post-summary">{{ page.summary }}</p>
+            {% endif %}
+        </div>
         <div class="label">
-
             <div class="label-card">
                 <i class="fa fa-calendar"></i>{{ page.date | date: "%F" }}
             </div>
-
             <div class="label-card">
-                {% if page.author %}<i class="fa fa-user"></i>{{ page.author }}
-                {% endif %}
+                {% if page.author %}<i class="fa fa-user"></i>{{ page.author }}{% endif %}
             </div>
-
             <div class="label-card">
-                {% if page.meta %}<i class="fa fa-key"></i>{{ page.meta }}  {% endif %}
+                {% if page.categories %}<i class="fa fa-folder-open-o"></i>{{ page.categories }}{% endif %}
             </div>
-
-
+            <div class="label-card">
+                {% if page.level %}<i class="fa fa-signal"></i>{{ page.level }}{% endif %}
+            </div>
             <div class="label-card">
             {% include tag.html %}
             </div>
-
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
@@ -61,28 +63,7 @@ layout: default
 
         {% include previousAndNext.html %}
 
-        
 
-
-    </div>
-    <button class="anchor"><i class="fa fa-anchor"></i></button>
-    <div class="right">
-        <div class="wrap">
-
-            <!-- Content -->
-            <div class="side content">
-                <div>
-                    Content
-                </div>
-                <ul id="content-side" class="content-ul">
-                    {% if hasSimilar.size > 0 %}
-                    <li><a href="#similar_posts">Similar Posts</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-            <!-- 其他div框放到这里 -->
-            <!-- <div class="side">bbbb</div> -->
-        </div>
     </div>
 </div>
 <script>
@@ -96,4 +77,3 @@ layout: default
     }
 }());
 </script>
-<script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>

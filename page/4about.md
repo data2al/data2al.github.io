@@ -6,28 +6,48 @@ icon: star
 type: page
 ---
 
-* content
-{:toc}
+<a href="https://www.linkedin.com/in/alan-l-b8920b66"><img src="/img/profile.jpg" alt="Alan Luo profile photo"></a>
 
-<a href= "https://www.linkedin.com/in/alan-l-b8920b66" ><img src="\img\profile.jpg" alt="irl_profile"></a>
-<br>Hello! I’m a Data Engineer passionate about helping businesses leverage data to achieve their goals. I have hands-on experience building ETL/ELT pipelines and analyzing data using SQL and Python. My expertise includes data visualization and analytics tools such as Microsoft Power BI, Apache Superset, Domo, Snowflake, Salesforce CRMA, and Tableau.
+I’m Alan, a data engineer who enjoys turning messy systems into dependable pipelines, reporting layers, and reusable operating patterns. This site is evolving from a personal blog into a compact knowledge directory where I can document concepts, warehouse techniques, and practical implementation notes I want to reuse later.
 
-## Reach out to me
+## What I work on
 
-* GitHub：[data2al](https://github.com/data2al)
-* [Linkedin](https://www.linkedin.com/in/alan-l-b8920b66/)
+- ETL and ELT pipeline design
+- SQL and Python for production data workflows
+- Analytics engineering and warehouse modeling
+- Data visualization and decision-support systems
+- AI-enabled workflow design where it is actually useful
 
-## My Cert Plan for 2025
-1. Snowflake Advanced - Data Science
-2. dbt Analytics Engineering Certification Exam
-3. Databricks Data Engineering Professional
+## Tools I use often
 
-## Tips for Engineers
-Everyone is wrong some of the time. Follow the five steps below:
-1. Question your requirements, make them less dumb.
-2. Try very hard to delete unnecessary process steps.
-3. Simplify or Optimize after you've completed steps 1 and 2.
-4. Accelerate Cycle time, if you're moving too slowly, go faster.
-5. Automate!
-Optimists build wealth and get things done, while Pessimists get to be right.
+- Snowflake
+- Python
+- SQL
+- Power BI
+- Apache Superset
+- Tableau
+- Salesforce CRMA
+- Domo
 
+## Reach out
+
+- GitHub: [data2al](https://github.com/data2al)
+- LinkedIn: [Alan Luo](https://www.linkedin.com/in/alan-l-b8920b66/)
+- Email: [alanluo@outlook.com](mailto:alanluo@outlook.com)
+
+## What this site is for
+
+I wanted something more useful than a reverse-chronological blog. The goal now is to make this a place where I can quickly look up:
+
+- implementation patterns I do not want to rethink from scratch
+- code snippets for common engineering tasks
+- notes on tools, tradeoffs, and architecture choices
+- practical lessons from projects across data and AI
+
+## Engineering principles I come back to
+
+1. Make the system easier to reason about before trying to make it clever.
+2. Favor boring, debuggable patterns when they solve the problem well.
+3. Keep data contracts explicit and visible.
+4. Reduce manual steps before automating them.
+5. Build references that future-you can actually reuse.

@@ -4,6 +4,8 @@ title:  "Salesforce AgentForce"
 categories: AI
 tags:  AI Salesforce
 author: Alan
+summary: "A quick reference on Salesforce Agentforce, its Atlas reasoning engine, and how autonomous agent flows are structured."
+level: Intermediate
 ---
 
 * content

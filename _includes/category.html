@@ -1,19 +1,13 @@
-{% capture categories %}
-  {% if post %}
-    {% for category in post.categories %}
-        <a href="{{ root_url }}/{{ site.category_dir }}#{{ category }}" title="Category: {{ category }}" rel="category">{{ category | join: "/" }}</a>{% unless forloop.last %}&nbsp;{% endunless %}
-    {% endfor %}
-  {% else %}
-    {% for category in page.categories %}
-        <a href="{{ root_url }}/{{ site.category_dir }}#{{ category }}" title="Category: {{ category }}" rel="category">{{ category | join: "/" }}</a>{% unless forloop.last %}&nbsp;{% endunless %}
-    {% endfor %}
-  {% endif %}
-{% endcapture %}
-{% capture category_size %}{{ categories | strip_newlines | replace: ' ', '' | size }}{% endcapture %}
-{% unless category_size == '0' %}
-<!-- <span class="point">•</span> -->
+{% if post %}
+  {% assign category_source = post.categories %}
+{% else %}
+  {% assign category_source = page.categories %}
+{% endif %}
+{% if category_source and category_source.size > 0 %}
 <span class="categories">
-  <i class="fa fa-th-list"></i>{{ categories }}
-  <!-- <span class="point">•</span> -->
+  <i class="fa fa-th-list"></i>
+  {% for category in category_source %}
+    <span class="meta-chip">{{ category }}</span>{% unless forloop.last %} {% endunless %}
+  {% endfor %}
 </span>
-{% endunless %}
+{% endif %}
