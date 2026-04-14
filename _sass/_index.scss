@@ -1,4 +1,4 @@
-.page[index] {
+.page-index {
     width: 820px;
 
     .left {
@@ -58,13 +58,13 @@
 }
 
 @media screen and (max-width: 900px) {
-    .page[index] {
+    .page-index {
         width: 94%;
     }
 }
 
 @media screen and (max-width: 770px) {
-    .page[index] .left {
+    .page-index .left {
         padding: 24px 18px;
     }
 }

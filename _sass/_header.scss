@@ -24,20 +24,14 @@ header {
     .brand {
         display: inline-flex;
         align-items: center;
-        gap: 14px;
+        gap: 12px;
 
-        .brand-mark {
-            width: 42px;
-            height: 42px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 14px;
-            background: linear-gradient(135deg, var(--accent), #8aa6ff);
-            color: #07111f;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
+        .brand-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            display: block;
+            flex: 0 0 auto;
         }
 
         .brand-copy {
