@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Python Environment Setup"
+title: "Setting up a Snowflake Connector in Python"
 categories: Programming
 tags: Python Snowflake Setup
 author: Alan

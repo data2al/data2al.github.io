@@ -7,6 +7,16 @@
                 <small>{{ site.brief-intro }}</small>
             </span>
         </a>
+        <div class="header-search" id="headerSearch">
+            <label class="search-label" for="siteSearch">Search articles</label>
+            <input
+                id="siteSearch"
+                class="search-input"
+                type="search"
+                placeholder="Search articles..."
+                autocomplete="off">
+            <div id="searchResults" class="search-results"></div>
+        </div>
         <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
         <nav id="headerNav">
             <ul>

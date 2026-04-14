@@ -56,6 +56,97 @@ header {
         display: none;
     }
 
+    .header-search {
+        position: relative;
+        flex: 1 1 auto;
+        max-width: 360px;
+        margin-left: auto;
+    }
+
+    .search-label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.18);
+        background: rgba(15, 23, 42, 0.72);
+        color: #e2e8f0;
+        font-size: 0.95rem;
+        transition: 0.2s ease;
+    }
+
+    .search-input::placeholder {
+        color: #94a3b8;
+    }
+
+    .search-input:focus {
+        outline: none;
+        border-color: rgba(102, 226, 199, 0.35);
+        box-shadow: 0 0 0 3px rgba(102, 226, 199, 0.08);
+    }
+
+    .search-results {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-4px);
+        transition: 0.18s ease;
+        border-radius: 18px;
+        background: rgba(10, 19, 35, 0.98);
+        border: 1px solid rgba(148, 163, 184, 0.16);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+    }
+
+    .search-results-show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .search-result-item,
+    .search-empty {
+        display: block;
+        padding: 14px 16px;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+    }
+
+    .search-result-item:last-child,
+    .search-empty:last-child {
+        border-bottom: 0;
+    }
+
+    .search-result-item:hover {
+        background: rgba(102, 226, 199, 0.08);
+    }
+
+    .search-result-title {
+        display: block;
+        color: #f8fafc;
+        font-weight: 600;
+    }
+
+    .search-result-meta,
+    .search-empty {
+        display: block;
+        color: #94a3b8;
+        font-size: 0.82rem;
+        margin-top: 3px;
+    }
+
     nav ul {
         margin: 0;
         display: flex;
@@ -93,6 +184,8 @@ header {
             width: 94%;
             min-height: 72px;
             position: relative;
+            flex-wrap: wrap;
+            padding: 12px 0;
         }
 
         .menu {
@@ -105,6 +198,13 @@ header {
             color: var(--text);
             background: rgba(148, 163, 184, 0.1);
             border: 1px solid rgba(148, 163, 184, 0.18);
+        }
+
+        .header-search {
+            order: 3;
+            flex: 1 0 100%;
+            max-width: none;
+            margin: 0;
         }
 
         > .active {

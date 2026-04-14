@@ -34,7 +34,7 @@ In the example below, the agent interprets the users request to report an advers
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![agentforce_medicine](/img/blog/agentforce_medicine.jpg)
 
-To better understand the Atlas Reasoning Engine, get some hands-on experience by clicking the link to the agentforce trailhead: [https://trailhead.salesforce.com/agentforce](https://trailhead.salesforce.com/content/learn/projects/quick-start-build-your-first-agent-with-agentforce/configure-an-agentforce-service-agent)
+Additional hands-on reference material is available in the Agentforce Trailhead: [https://trailhead.salesforce.com/agentforce](https://trailhead.salesforce.com/content/learn/projects/quick-start-build-your-first-agent-with-agentforce/configure-an-agentforce-service-agent)
 
 --- 
 

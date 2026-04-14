@@ -1,0 +1,16 @@
+<aside class="right homepage-rail">
+    <div class="side new-articles">
+        <div>New Articles</div>
+        <div class="side-body">
+            <ul class="new-articles-list">
+                {% assign latest_posts = site.posts | sort: "date" | reverse %}
+                {% for post in latest_posts limit: 3 %}
+                <li>
+                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    <span class="new-articles-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</aside>
