@@ -6,6 +6,7 @@ tags:  Snowflake Data Pipelines
 author: Alan
 summary: "How Snowflake dynamic tables help you build refresh-aware transformation pipelines with less orchestration."
 level: Intermediate
+permalink: /data-engineering-solutions/snowflake-dynamic-tables/
 ---
 
 * content
