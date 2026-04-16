@@ -12,6 +12,11 @@ description_footer: Practical notes on analytics engineering, data systems, SQL,
 
 markdown: kramdown
 
+collections:
+  scribbles:
+    output: true
+    permalink: /scribbles/:name/
+
 kramdown:
   input: GFM
   syntax_highlighter: rouge

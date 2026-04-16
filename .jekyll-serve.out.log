@@ -1,0 +1,65 @@
+Configuration file: C:/Users/alanl/Desktop/data2al.github.io-main/_config.yml
+            Source: C:/Users/alanl/Desktop/data2al.github.io-main
+       Destination: C:/Users/alanl/Desktop/data2al.github.io-main/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 1.074 seconds.
+ Auto-regeneration: enabled for 'C:/Users/alanl/Desktop/data2al.github.io-main'
+    Server address: http://127.0.0.1:4000/
+  Server running... press ctrl-c to stop.
+[2026-04-16 15:26:34] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:4 
+	C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in 'block in WEBrick::GenericServer#start_thread'
+[2026-04-16 15:26:34] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:4 
+	C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2026-04-16 15:27:25
+                    page/9scribbles.md
+                    ...done in 0.6798367 seconds.
+                    
+      Regenerating: 3 file(s) changed at 2026-04-16 15:30:38
+                    _scribbles/brain-chip-ideas.md
+                    js/main.js
+                    _layouts/scribble.html
+                    ...done in 0.6364852 seconds.
+                    
+[2026-04-16 15:33:24] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:4 
+	C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in 'block in WEBrick::GenericServer#start_thread'
+[2026-04-16 15:33:25] ERROR Errno::ECONNRESET: An existing connection was forcibly closed by the remote host. @ io_fillbuf - fd:4 
+	C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in 'IO#eof?'
+	C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/webrick-1.9.2/lib/webrick/httpserver.rb:82:in 'WEBrick::HTTPServer#run'
+	C:/Ruby34-x64/lib/ruby/gems/3.4.0/gems/webrick-1.9.2/lib/webrick/server.rb:309:in 'block in WEBrick::GenericServer#start_thread'
+      Regenerating: 1 file(s) changed at 2026-04-16 15:41:35
+                    page/9scribbles.md
+                    ...done in 0.5027098 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-04-16 15:43:57
+                    page/9scribbles.md
+                    ...done in 0.5102607 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-04-16 15:46:01
+                    _scribbles/telecom-afterlife-subscriptions.md
+                    ...done in 0.4086169 seconds.
+                    
+      Regenerating: 2 file(s) changed at 2026-04-16 15:48:25
+                    _scribbles/telecom-lazarus.md
+                    _scribbles/telecom-afterlife-subscriptions.md
+                    ...done in 0.5231636 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-04-16 15:49:14
+                    _scribbles/telecom-lazarus.md
+                    ...done in 0.5036751 seconds.
+                    
+[2026-04-16 15:49:24] ERROR '/scribbles/telecom-afterlife-subscriptions/' not found.
+      Regenerating: 1 file(s) changed at 2026-04-16 15:52:14
+                    _scribbles/ai-holographic-companions.md
+                    ...done in 0.5664378 seconds.
+                    
+      Regenerating: 1 file(s) changed at 2026-04-16 15:55:12
+                    _scribbles/chairbound-industry.md
+                    ...done in 0.5680322 seconds.
+                    

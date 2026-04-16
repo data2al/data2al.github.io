@@ -145,3 +145,66 @@
   window.addEventListener('scroll', toggleScrollButton)
   toggleScrollButton()
 }());
+
+(function() {
+  var lock = document.querySelector('[data-scribbles-lock]')
+  var content = document.querySelector('[data-scribbles-content]')
+  var form = document.querySelector('[data-scribbles-form]')
+  var error = document.querySelector('[data-scribbles-error]')
+  var protectedPage = document.querySelector('[data-scribbles-protected]')
+  var passcode = '2077'
+  var authKey = 'scribblesUnlocked'
+  var directoryPath = '/scribbles/'
+
+  if (protectedPage) {
+    if (window.localStorage.getItem(authKey) === 'true') {
+      return
+    }
+
+    var nextPath = encodeURIComponent(window.location.pathname)
+    window.location.href = directoryPath + '?next=' + nextPath
+    return
+  }
+
+  if (!lock || !content || !form) {
+    return
+  }
+
+  function unlock() {
+    lock.setAttribute('hidden', 'hidden')
+    content.removeAttribute('hidden')
+  }
+
+  if (window.localStorage.getItem(authKey) === 'true') {
+    unlock()
+    return
+  }
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault()
+
+    var input = document.querySelector('#scribblesPasscode')
+    if (!input) {
+      return
+    }
+
+    if (input.value === passcode) {
+      window.localStorage.setItem(authKey, 'true')
+      var params = new URLSearchParams(window.location.search)
+      var next = params.get('next')
+      if (next) {
+        window.location.href = next
+        return
+      }
+      unlock()
+      return
+    }
+
+    if (error) {
+      error.removeAttribute('hidden')
+    }
+
+    input.value = ''
+    input.focus()
+  })
+}());

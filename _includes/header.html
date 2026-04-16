@@ -38,6 +38,15 @@
                         <i class="fa fa-user-o"></i>About
                     </a>
                 </li>
+                <li>
+                    {% if page.url == '/scribbles/' %}
+                    <a class="active" href="{{site.baseurl}}/scribbles/">
+                    {% else %}
+                    <a href="{{site.baseurl}}/scribbles/">
+                    {% endif %}
+                        <i class="fa fa-pencil"></i>Scribbles
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
