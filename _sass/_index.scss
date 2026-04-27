@@ -7,71 +7,61 @@
         padding: 40px;
     }
 
-    .homepage-rail {
-        position: fixed;
-        top: 132px;
-        right: 24px;
-        width: 170px;
-    }
-
-    .homepage-rail .side {
-        border-radius: 22px;
-        background: var(--panel);
-        color: var(--text);
-        border: 1px solid rgba(148, 163, 184, 0.14);
-        box-shadow: var(--shadow);
-    }
-
-    .homepage-rail .side > div {
-        padding: 18px 20px 14px;
-        border-bottom: 1px solid rgba(148, 163, 184, 0.12);
-        font-size: 0.98rem;
-        font-weight: 700;
-        color: #ffffff;
-    }
-
-    .homepage-rail .side-body {
-        padding: 6px 20px 0;
-    }
-
-    .homepage-rail .new-articles-list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .homepage-rail .new-articles-list li {
-        padding: 12px 0;
-        border-bottom: 1px solid rgba(148, 163, 184, 0.1);
-    }
-
-    .homepage-rail .new-articles-list li:last-child {
-        border-bottom: 0;
-    }
-
-    .homepage-rail .new-articles-list a {
-        display: block;
+    .homepage-hero {
+        margin-bottom: 30px;
+        padding: 28px 28px 24px;
+        border-radius: 26px;
+        background:
+            radial-gradient(circle at top left, rgba(56, 189, 248, 0.22), transparent 34%),
+            radial-gradient(circle at top right, rgba(34, 197, 94, 0.18), transparent 28%),
+            linear-gradient(135deg, #07111f, #10233c 58%, #12385f);
         color: #e2e8f0;
-        font-weight: 600;
-        line-height: 1.45;
+        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.16);
     }
 
-    .homepage-rail .new-articles-date {
-        display: block;
-        margin-top: 5px;
-        color: #94a3b8;
-        font-size: 0.8rem;
+    .homepage-hero .eyebrow {
+        color: #93c5fd;
     }
 
-    .directory-home h1 {
+    .homepage-hero h1 {
         margin: 0 0 12px;
         font-size: clamp(1.9rem, 3vw, 2.7rem);
+        color: #ffffff;
     }
 
     .directory-intro {
         margin-bottom: 28px;
-        color: #475569;
+        color: inherit;
         font-size: 1.02rem;
+        line-height: 1.7;
+    }
+
+    .hero-metrics {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .hero-metric {
+        padding: 16px 18px;
+        border: 1px solid rgba(148, 163, 184, 0.18);
+        border-radius: 18px;
+        background: rgba(15, 23, 42, 0.22);
+        backdrop-filter: blur(10px);
+    }
+
+    .hero-metric-value {
+        display: block;
+        margin-bottom: 4px;
+        color: #ffffff;
+        font-size: 1.6rem;
+        font-weight: 800;
+    }
+
+    .hero-metric-label {
+        display: block;
+        color: #cbd5e1;
+        font-size: 0.86rem;
     }
 
     .directory-list {
@@ -87,6 +77,11 @@
         border: 1px solid rgba(148, 163, 184, 0.2);
         background: #ffffff;
         transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .directory-entry-primary {
+        background: linear-gradient(180deg, #ffffff, #f4f8ff);
+        border-color: rgba(37, 99, 235, 0.16);
     }
 
     .directory-entry:hover {
@@ -107,17 +102,107 @@
         display: block;
         color: #64748b;
     }
+
+    .homepage-featured {
+        margin-top: 34px;
+    }
+
+    .homepage-recent {
+        margin-top: 34px;
+    }
+
+    .featured-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .recent-posts-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .featured-card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-height: 190px;
+        padding: 22px;
+        border-radius: 22px;
+        background: #ffffff;
+        border: 1px solid rgba(148, 163, 184, 0.16);
+        box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .featured-card:hover {
+        transform: translateY(-2px);
+        border-color: rgba(14, 165, 233, 0.24);
+        box-shadow: 0 18px 30px rgba(15, 23, 42, 0.1);
+    }
+
+    .featured-card-topic {
+        color: #0f766e;
+        font-size: 0.77rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .featured-card strong {
+        color: #0f172a;
+        font-size: 1.04rem;
+        line-height: 1.45;
+    }
+
+    .featured-card span:last-child {
+        color: #64748b;
+        line-height: 1.65;
+    }
+
+    .recent-post-card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-height: 170px;
+        padding: 20px 22px;
+        border-radius: 22px;
+        background: linear-gradient(180deg, #ffffff, #f8fbff);
+        border: 1px solid rgba(148, 163, 184, 0.16);
+        box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .recent-post-card:hover {
+        transform: translateY(-2px);
+        border-color: rgba(37, 99, 235, 0.24);
+        box-shadow: 0 18px 30px rgba(15, 23, 42, 0.1);
+    }
+
+    .recent-post-date {
+        color: #0f766e;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+
+    .recent-post-card strong {
+        color: #0f172a;
+        font-size: 1.02rem;
+        line-height: 1.45;
+    }
+
+    .recent-post-summary {
+        color: #64748b;
+        line-height: 1.65;
+    }
 }
 
 @media screen and (max-width: 900px) {
     .page-index {
         width: 94%;
-    }
-}
-
-@media screen and (max-width: 1499px) {
-    .page-index .homepage-rail {
-        display: none;
     }
 }
 
@@ -129,8 +214,10 @@
             padding: 24px 18px;
         }
 
-        .homepage-rail {
-            display: none;
+        .hero-metrics,
+        .featured-grid,
+        .recent-posts-grid {
+            grid-template-columns: 1fr;
         }
     }
 }

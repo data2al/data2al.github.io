@@ -1,29 +1,23 @@
 ---
 layout: post
-title: "Manage Python Virtual Environments With venv"
-categories: Programming
-tags: Python Virtual-Environment venv Packaging
+title: "Manage Python Environments for Snowpark and Databricks Projects"
+categories: Databricks
+tags: Python Snowpark Databricks venv Packaging Local-Development
 author: Alan
-summary: "A reference workflow for creating, activating, updating, and removing Python virtual environments with venv."
+summary: "A practical workflow for keeping Snowpark and Databricks local Python environments isolated, repeatable, and easy to rebuild."
 level: Beginner
 ---
 
 * content
 {:toc}
 
-Python virtual environments isolate project dependencies so one project does not overwrite or conflict with another. The built-in `venv` module is the standard way to manage that isolation in many local development workflows.
+When one project uses the Snowflake connector, another uses Snowpark, and a third depends on Databricks SDK packages, dependency drift becomes easy to create and annoying to debug. Python virtual environments are the simplest way to keep those stacks isolated.
 
 ## Create a virtual environment
 
 ```bash
 python -m venv .venv
 ```
-
-This creates a `.venv` directory containing:
-
-- a Python interpreter for the environment
-- installed packages for that environment
-- activation scripts for different shells
 
 ## Activate the environment
 
@@ -45,53 +39,23 @@ This creates a `.venv` directory containing:
 source .venv/bin/activate
 ```
 
-After activation, `python` and `pip` point to the environment instead of the system interpreter.
-
-## Install packages into the environment
+## Install the packages you need
 
 ```bash
-python -m pip install snowflake-connector-python pandas
+python -m pip install snowflake-connector-python snowflake-snowpark-python databricks-sdk pandas
 ```
 
-Using `python -m pip` helps ensure that `pip` installs into the currently active interpreter.
+Using `python -m pip` helps ensure the packages install into the active environment.
 
-## Save dependencies to a requirements file
+## Save dependencies
 
 ```bash
 python -m pip freeze > requirements.txt
 ```
 
-This captures the installed package versions so the environment can be recreated later.
+This makes it easier to recreate the same setup in CI or on another machine.
 
-## Recreate the environment from requirements
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-```
-
-On Windows, the activation command should match the shell in use.
-
-## Deactivate the environment
-
-```bash
-deactivate
-```
-
-This returns the shell to the default system Python.
-
-## Remove and rebuild the environment
-
-If an environment becomes inconsistent, it can be removed and recreated.
-
-```bash
-rm -rf .venv
-python -m venv .venv
-python -m pip install -r requirements.txt
-```
-
-On Windows PowerShell:
+## Rebuild when needed
 
 ```powershell
 Remove-Item -Recurse -Force .venv
@@ -103,5 +67,5 @@ python -m pip install -r requirements.txt
 
 - keep `.venv` out of version control
 - store dependency definitions in `requirements.txt` or another lock file
-- activate the environment before running scripts, tests, or package installs
-- recreate the environment when package state becomes difficult to debug
+- activate the environment before running Snowpark jobs, Databricks scripts, or tests
+- rebuild the environment when package state becomes difficult to debug

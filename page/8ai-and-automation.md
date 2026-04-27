@@ -1,24 +1,26 @@
 ---
 layout: page
-title: AI and Automation Notes
-permalink: /ai-and-automation/
+title: Databricks Playbooks
+permalink: /databricks-playbooks/
 icon: magic
 type: hidden
+topic_filter: Databricks
+topic_label: Databricks Playbooks
 ---
 
-Notes on agent systems, workflow automation, and practical AI usage in engineering work.
+Practical Databricks notes covering notebooks, jobs, Python services, assistants, environments, and lakehouse delivery patterns.
 
 ## Articles
 
 {% assign sorted_posts = site.posts | sort: "title" %}
 {% for post in sorted_posts %}
-{% if post.categories contains "AI" %}
+{% if post.tags contains "Databricks" or post.categories contains "Databricks" %}
 - [{{ post.title }}]({{ post.url | prepend: site.baseurl }}){% if post.summary %}: {{ post.summary }}{% endif %}
 {% endif %}
 {% endfor %}
 
 ## What belongs here
 
-- agent workflow design
-- automation patterns for repetitive tasks
-- practical notes on tool behavior and implementation tradeoffs
+- notebook and asset organization that scales beyond one analyst
+- jobs, services, and automation patterns that connect to the lakehouse
+- assistant, ML, and Python workflows that help teams ship faster

@@ -138,61 +138,6 @@
     }
 }
 
-.scribbles-lock,
-.scribbles-content {
-  max-width: 520px;
-}
-
-.scribbles-lock-eyebrow {
-  margin-bottom: 0.5rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #6b7280;
-}
-
-.scribbles-lock-copy {
-  margin-bottom: 1rem;
-}
-
-.scribbles-lock-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.scribbles-lock-label {
-  font-weight: 600;
-}
-
-.scribbles-lock-input {
-  width: 100%;
-  max-width: 240px;
-  padding: 0.7rem 0.85rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-.scribbles-lock-button {
-  width: fit-content;
-  padding: 0.7rem 1rem;
-  border: 0;
-  border-radius: 8px;
-  background: #111827;
-  color: #fff;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.scribbles-lock-error {
-  color: #b91c1c;
-  font-weight: 600;
-}
-
 .career-path {
     margin: 28px 0 32px;
     padding: 24px 24px 14px;

@@ -4,14 +4,22 @@
   {% include head.html %}
   {% assign article_count = site.posts | size %}
   {% assign article_counter_label = "All Articles" %}
-  {% if page.url == '/programming-snippets/' or page.categories contains "Programming" %}
+  {% if page.url == '/snowflake-playbooks/' or page.url == '/programming-snippets/' or page.topic_filter == 'Snowflake' or page.categories contains "Snowflake" %}
     {% assign article_count = 0 %}
     {% for post in site.posts %}
-      {% if post.categories contains "Programming" %}
+      {% if post.tags contains "Snowflake" or post.categories contains "Snowflake" %}
         {% assign article_count = article_count | plus: 1 %}
       {% endif %}
     {% endfor %}
-    {% assign article_counter_label = "Programming Articles" %}
+    {% assign article_counter_label = "Snowflake Playbooks" %}
+  {% elsif page.url == '/databricks-playbooks/' or page.url == '/ai-and-automation/' or page.topic_filter == 'Databricks' or page.categories contains "Databricks" %}
+    {% assign article_count = 0 %}
+    {% for post in site.posts %}
+      {% if post.tags contains "Databricks" or post.categories contains "Databricks" %}
+        {% assign article_count = article_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    {% assign article_counter_label = "Databricks Playbooks" %}
   {% elsif page.url == '/sql-snippets/' or page.categories contains "SQL" or page.tags contains "SQL" %}
     {% assign article_count = 0 %}
     {% for post in site.posts %}
@@ -28,14 +36,6 @@
       {% endif %}
     {% endfor %}
     {% assign article_counter_label = "Data Engineering Articles" %}
-  {% elsif page.url == '/ai-and-automation/' or page.categories contains "AI" %}
-    {% assign article_count = 0 %}
-    {% for post in site.posts %}
-      {% if post.categories contains "AI" %}
-        {% assign article_count = article_count | plus: 1 %}
-      {% endif %}
-    {% endfor %}
-    {% assign article_counter_label = "AI And Automation Articles" %}
   {% elsif page.url == '/reference-index/' %}
     {% assign article_counter_label = "Indexed Articles" %}
   {% endif %}

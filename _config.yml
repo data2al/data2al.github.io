@@ -1,21 +1,17 @@
 title: data2al
-brief-intro: Data Engineering Notes and Code Patterns
+brief-intro: Snowflake, Databricks, and SQL Engineering Notes
 baseurl: ""
 url: "https://www.data2al.com"
 
 permalink: /:year/:month/:day/:title/
 
 github_username:  data2al
+linkedIn_username: alan-l-b8920b66
 email: alanluo@outlook.com
-description: A concept directory for programming, analytics engineering, and practical data platform patterns.
-description_footer: Practical notes on analytics engineering, data systems, SQL, Python, and AI workflows.
+description: Snowflake, Databricks, and SQL implementation notes for data platform design, performance, cost, and delivery.
+description_footer: Practical Snowflake, Databricks, and SQL notes for modern data platform work.
 
 markdown: kramdown
-
-collections:
-  scribbles:
-    output: true
-    permalink: /scribbles/:name/
 
 kramdown:
   input: GFM

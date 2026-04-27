@@ -6,7 +6,7 @@ icon: sitemap
 type: hidden
 ---
 
-Concept notes and implementation patterns for pipelines, warehousing, and modeling.
+Cross-platform patterns for pipelines, warehousing, data movement, and operating models across Snowflake, Databricks, and supporting tools.
 
 ## Articles
 
@@ -22,4 +22,4 @@ Concept notes and implementation patterns for pipelines, warehousing, and modeli
 - dbt model structure for staging, intermediate, and marts layers
 - warehouse orchestration and refresh strategy
 - incremental loading, deduplication, and data quality checks
-- performance tuning for warehouse transformations
+- performance tuning, cost control, and platform operating patterns

@@ -1,48 +1,79 @@
 ---
 layout: post
-title:  "Salesforce AgentForce"
-categories: AI
-tags:  AI Salesforce
+title: "Use Databricks Assistant to Speed Up SQL and Notebook Work"
+categories: Databricks
+tags: Databricks Assistant Notebooks SQL Python Productivity
 author: Alan
-summary: "A quick reference on Salesforce Agentforce, its Atlas reasoning engine, and how autonomous agent flows are structured."
+summary: "A practical guide to using Databricks Assistant for SQL generation, notebook cleanup, debugging, and faster lakehouse iteration."
 level: Intermediate
 ---
 
 * content
 {:toc}
 
-AgentForce is a cutting-edge platform from Salesforce that enables businesses to create autonomous AI agents. These agents collaborate with human employees to enhance customer experiences and optimize operations.
+Databricks Assistant works best as a workflow accelerator, not as a substitute for engineering judgment. For analysts and data engineers, the biggest wins usually come from reducing notebook friction, shortening debugging cycles, and getting from business question to usable query faster.
 
-#### Key Capabilities
-1. Responds to inquiries, executes tasks, and follows instructions efficiently.
-2. Operates across multiple Salesforce channels, assisting with daily workflows and communication.
-3. Adapts to diverse business needs while maintaining compliance with organizational frameworks.
+## Where it helps most
 
+- drafting Databricks SQL from a plain-English request
+- explaining an unfamiliar SQL or PySpark block
+- debugging schema mismatches and join mistakes
+- rewriting code into a cleaner or more platform-friendly form
+- documenting notebook logic so teammates can maintain it
 
+## A good prompting pattern
 
---- 
+The strongest prompts are narrow and grounded in the local notebook context.
 
-### Atlas Reasoning Engine
+```text
+Rewrite this query for Databricks SQL.
+Keep one row per customer_id.
+Use the latest event_ts.
+Exclude test records and keep the output readable.
+```
 
-Atlas reasoning engine is designed to simulate human-like thought process within Salesforce, it is the "brain" behind AI agents, which can make decisions, take actions, and continuously learn - in real time.
+That usually works better than asking for a full solution with no context because the assistant can anchor itself to:
 
-In the example below, the agent interprets the users request to report an adverse event, underlining patient side effects caused by a certain drug. The drug information is pulled through a record search and finally an adverse event record is created. The reasoning engine basically went though: 
-- Intent detection
-- Query processing
-- Planning/orchestration
-- Action invocation
+- the current tables and columns
+- the language already in use
+- surrounding transformations in the notebook
+- the exact error or output mismatch on screen
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![agentforce_medicine](/img/blog/agentforce_medicine.jpg)
+## Use it for draft, inspect, refine
 
-Additional hands-on reference material is available in the Agentforce Trailhead: [https://trailhead.salesforce.com/agentforce](https://trailhead.salesforce.com/content/learn/projects/quick-start-build-your-first-agent-with-agentforce/configure-an-agentforce-service-agent)
+An effective loop looks like this:
 
---- 
+1. Ask for a first draft.
+2. Inspect the joins, filters, and assumptions.
+3. Run it on real data.
+4. Tighten the prompt with the specific edge case that failed.
+5. Keep the final logic simple enough for humans to own.
 
-### What makes Agentforce special?
+That pattern gives the assistant room to help without turning the notebook into a black box.
 
-The "running user" provides service agents with data access and Apex class permissions, allowing them to perform tasks efficiently. Unlike Einstein Copilot, service agents rely on this predefined user because they function independently of the logged-in user's context. The Atlas Reasoning Engine maintains conversation context by storing key details in memory. This enables it to retrieve previously mentioned information, such as a medicine name, without requiring the user to repeat it, ensuring a smooth and efficient interaction.
+## Good tasks for data teams
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![agentforce_medicine](/img/blog/salesforceai_architect.jpg)
+- "Convert this Pandas cleanup into PySpark."
+- "Explain why this merge may create duplicates."
+- "Make this query easier to read before we tune it."
+- "Document these notebook cells in plain English."
+- "Suggest a safer incremental pattern for this bronze-to-silver flow."
 
-\
-&nbsp;
+## Where not to trust it blindly
+
+- security and permissions design
+- cost estimates without workload evidence
+- production performance recommendations without query history
+- final business logic validation
+- lineage-sensitive logic that affects regulated data
+
+## Summary
+
+Databricks Assistant is most useful when it shortens routine notebook work:
+
+- drafting SQL and Python
+- explaining existing logic
+- helping debug transformations
+- accelerating cleanup and documentation
+
+Used that way, it can make a data engineer or analyst noticeably faster while keeping the real decisions in human hands.

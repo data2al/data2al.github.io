@@ -4,34 +4,105 @@ layout: default
 
 <div class="page page-index clearfix">
     <div class="left">
-        <section class="directory-home">
-            <p class="eyebrow">Directory</p>
-            <h1>Find articles and solutions by problem area.</h1>
-            <p class="directory-intro">Pick a directory below to jump straight into reusable examples, notes, and implementation patterns.</p>
+        <section class="homepage-hero">
+            <p class="eyebrow">Snowflake And Databricks</p>
+            <h1>Practical data engineering notes for Snowflake, Databricks, and warehouse SQL.</h1>
+            <p class="directory-intro">This site is organized like a technical portfolio: playbooks for Snowflake architecture, Databricks delivery patterns, and SQL examples that readers can reuse quickly.</p>
 
+            <div class="hero-metrics">
+                <div class="hero-metric">
+                    <span class="hero-metric-value">{{ site.posts | size }}</span>
+                    <span class="hero-metric-label">Published articles</span>
+                </div>
+                <div class="hero-metric">
+                    {% assign snowflake_posts = 0 %}
+                    {% for post in site.posts %}
+                    {% if post.tags contains "Snowflake" or post.categories contains "Snowflake" %}
+                    {% assign snowflake_posts = snowflake_posts | plus: 1 %}
+                    {% endif %}
+                    {% endfor %}
+                    <span class="hero-metric-value">{{ snowflake_posts }}</span>
+                    <span class="hero-metric-label">Snowflake-focused notes</span>
+                </div>
+                <div class="hero-metric">
+                    {% assign databricks_posts = 0 %}
+                    {% for post in site.posts %}
+                    {% if post.tags contains "Databricks" or post.categories contains "Databricks" %}
+                    {% assign databricks_posts = databricks_posts | plus: 1 %}
+                    {% endif %}
+                    {% endfor %}
+                    <span class="hero-metric-value">{{ databricks_posts }}</span>
+                    <span class="hero-metric-label">Databricks-focused notes</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="directory-home">
+            <p class="eyebrow">Start Here</p>
             <div class="directory-list">
-                <a class="directory-entry" href="{{ site.baseurl }}/programming-snippets/">
-                    <span class="directory-name">Programming Articles</span>
-                    <span class="directory-copy">Python helpers, small utilities, and copy-friendly examples.</span>
+                <a class="directory-entry directory-entry-primary" href="{{ site.baseurl }}/snowflake-playbooks/">
+                    <span class="directory-name">Snowflake Playbooks</span>
+                    <span class="directory-copy">Warehouse design, cost attribution, ingestion, governance, CLI setup, and production-ready Snowflake patterns.</span>
+                </a>
+                <a class="directory-entry directory-entry-primary" href="{{ site.baseurl }}/databricks-playbooks/">
+                    <span class="directory-name">Databricks Playbooks</span>
+                    <span class="directory-copy">Lakehouse delivery notes, notebooks, jobs, environments, assistant workflows, and platform implementation ideas.</span>
                 </a>
                 <a class="directory-entry" href="{{ site.baseurl }}/sql-snippets/">
                     <span class="directory-name">SQL Articles</span>
-                    <span class="directory-copy">Queries for deduping, validation, transformation, and warehouse checks.</span>
+                    <span class="directory-copy">Reusable SQL for deduping, validation, transformations, rankings, retention, and warehouse checks.</span>
                 </a>
                 <a class="directory-entry" href="{{ site.baseurl }}/data-engineering-solutions/">
                     <span class="directory-name">Data Engineering Solutions</span>
-                    <span class="directory-copy">Patterns for pipelines, models, orchestration, and warehouse design.</span>
+                    <span class="directory-copy">Cross-platform patterns for pipelines, orchestration, file movement, warehouse design, and operating models.</span>
                 </a>
-                <a class="directory-entry" href="{{ site.baseurl }}/ai-and-automation/">
-                    <span class="directory-name">AI and Automation Notes</span>
-                    <span class="directory-copy">Agent workflows, platform notes, and automation ideas worth reusing.</span>
-                </a>
-                <a class="directory-entry" href="{{ site.baseurl }}/reference-index/">
-                    <span class="directory-name">Reference Index</span>
-                    <span class="directory-copy">A compact alphabetical index of all concept notes across the site.</span>
+                <a class="directory-entry" href="{{ site.baseurl }}/about/">
+                    <span class="directory-name">About and Focus</span>
+                    <span class="directory-copy">A quick view of the platform problems, tools, and engineering principles that shape the content here.</span>
                 </a>
             </div>
         </section>
+
+        <section class="homepage-featured">
+            <p class="eyebrow">Featured Reads</p>
+            <div class="featured-grid">
+                <a class="featured-card" href="{{ site.baseurl }}/2026/04/15/estimate-cost-per-query-in-snowflake-with-better-cost-attribution/">
+                    <span class="featured-card-topic">Snowflake FinOps</span>
+                    <strong>Estimate Cost Per Query in Snowflake With Better Cost Attribution</strong>
+                    <span>Use warehouse history and query metadata to explain spend in language stakeholders understand.</span>
+                </a>
+                <a class="featured-card" href="{{ site.baseurl }}/2026/02/10/build-incremental-snowflake-pipelines-with-streams-tasks-and-dynamic-tables/">
+                    <span class="featured-card-topic">Snowflake Pipelines</span>
+                    <strong>Build Incremental Snowflake Pipelines With Streams, Tasks, and Dynamic Tables</strong>
+                    <span>Show when each refresh pattern is the right operational choice.</span>
+                </a>
+                <a class="featured-card" href="{{ site.baseurl }}/2025/09/29/call-an-mcp-server-from-a-python-service/">
+                    <span class="featured-card-topic">Databricks Jobs</span>
+                    <strong>Call Databricks Jobs from a Python Service</strong>
+                    <span>Bridge internal services to notebook and workflow execution without manual handoffs.</span>
+                </a>
+                <a class="featured-card" href="{{ site.baseurl }}/2025/06/26/use-docker-to-run-services-and-edit-files-in-containers/">
+                    <span class="featured-card-topic">Local Platform Dev</span>
+                    <strong>Use Docker for Local Snowflake and Databricks Development</strong>
+                    <span>Keep local tooling reproducible while you build loaders, clients, and test harnesses.</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="homepage-recent">
+            <p class="eyebrow">Recently Posted</p>
+            <div class="recent-posts-grid">
+                {% assign latest_posts = site.posts | sort: "date" | reverse %}
+                {% for post in latest_posts limit: 6 %}
+                <a class="recent-post-card" href="{{ post.url | prepend: site.baseurl }}">
+                    <span class="recent-post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                    <strong>{{ post.title }}</strong>
+                    {% if post.summary %}
+                    <span class="recent-post-summary">{{ post.summary }}</span>
+                    {% endif %}
+                </a>
+                {% endfor %}
+            </div>
+        </section>
     </div>
-    {% include new-articles.html %}
 </div>

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Setting up a Snowflake Connector in Python"
-categories: Programming
-tags: Python Snowflake Setup
+title: "Set Up a Snowflake Connector in Python"
+categories: Snowflake
+tags: Python Snowflake Setup Snowpark Connectivity
 author: Alan
 summary: "A clean starting point for loading environment variables and opening a Snowflake connection from Python."
 level: Beginner
@@ -11,7 +11,7 @@ level: Beginner
 * content
 {:toc}
 
-This is a simple setup pattern for scripts that need warehouse access without hardcoding secrets into source files.
+This is a simple setup pattern for Python scripts that need Snowflake access without hardcoding secrets into source files.
 
 ## Example
 
@@ -34,6 +34,7 @@ connection = snowflake.connector.connect(
 - secrets stay outside the script
 - local development and deployment environments can use the same code
 - connection settings are easy to rotate or replace later
+- the same setup can support connector-based scripts and Snowpark entry points
 
 ## Notes
 

@@ -26,7 +26,34 @@
                         {% else %}
                     <a href="{{site.baseurl}}/">
                     {% endif %}
-                        <i class="fa fa-home"></i>Directory
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+                <li>
+                    {% if page.url == '/snowflake-playbooks/' %}
+                    <a class="active" href="{{site.baseurl}}/snowflake-playbooks/">
+                    {% else %}
+                    <a href="{{site.baseurl}}/snowflake-playbooks/">
+                    {% endif %}
+                        <i class="fa fa-snowflake-o"></i>Snowflake
+                    </a>
+                </li>
+                <li>
+                    {% if page.url == '/databricks-playbooks/' or page.url == '/ai-and-automation/' %}
+                    <a class="active" href="{{site.baseurl}}/databricks-playbooks/">
+                    {% else %}
+                    <a href="{{site.baseurl}}/databricks-playbooks/">
+                    {% endif %}
+                        <i class="fa fa-magic"></i>Databricks
+                    </a>
+                </li>
+                <li>
+                    {% if page.url == '/sql-snippets/' %}
+                    <a class="active" href="{{site.baseurl}}/sql-snippets/">
+                    {% else %}
+                    <a href="{{site.baseurl}}/sql-snippets/">
+                    {% endif %}
+                        <i class="fa fa-database"></i>SQL
                     </a>
                 </li>
                 <li>
@@ -36,15 +63,6 @@
                     <a href="{{site.baseurl}}/about/">
                     {% endif %}
                         <i class="fa fa-user-o"></i>About
-                    </a>
-                </li>
-                <li>
-                    {% if page.url == '/scribbles/' %}
-                    <a class="active" href="{{site.baseurl}}/scribbles/">
-                    {% else %}
-                    <a href="{{site.baseurl}}/scribbles/">
-                    {% endif %}
-                        <i class="fa fa-pencil"></i>Scribbles
                     </a>
                 </li>
             </ul>

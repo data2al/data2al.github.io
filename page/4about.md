@@ -8,7 +8,7 @@ type: page
 
 <a href="https://www.linkedin.com/in/alan-l-b8920b66"><img src="/img/profile.jpg" alt="Alan Luo profile photo"></a>
 
-I’m Alan, a data platform engineer focused on building dependable pipelines, clear reporting layers, and reusable operating patterns. This site is a compact knowledge directory for the concepts, implementation notes, and technical references that support day-to-day engineering work.
+I’m Alan, a data platform engineer focused on Snowflake, Databricks, and warehouse-first analytics engineering. This site is the public version of how I work: clear implementation notes, reusable platform patterns, and practical articles that help teams deliver reliable data products faster.
 
 <section class="career-path">
   <p class="eyebrow">Progression</p>
@@ -53,40 +53,40 @@ I’m Alan, a data platform engineer focused on building dependable pipelines, c
 
 ## What I work on
 
-- Data pipeline design across ETL and ELT workflows
+- Snowflake warehouse design, cost control, and secure data delivery
+- Databricks notebooks, jobs, Python workflows, and lakehouse operating patterns
 - SQL and Python for production-grade data processing
 - Warehouse modeling and analytics engineering
 - Reporting systems that support operational and business decisions
-- AI and automation patterns that improve engineering workflows
 
 ## Tools I use often
 
-- SQL Server
 - Snowflake
+- Databricks
 - Python
 - SQL
 - Docker
+- SQL Server
 - Power BI
 - Apache Superset
 - Tableau
-- Salesforce CRMA
-- Domo
+- dbt
 
 ## What this site is for
 
 The site is designed as a working reference rather than a traditional reverse-chronological blog. Its purpose is to collect:
 
 - implementation patterns worth reusing
-- code snippets for common engineering tasks
+- Snowflake and Databricks guidance that reads well as a portfolio
+- SQL snippets for common warehouse tasks
 - notes on tools, tradeoffs, and architecture decisions
-- practical lessons across data platforms, analytics engineering, and automation
 
 ## How the content is organized
 
-- Programming articles for Python utilities, Docker workflows, and environment setup
+- Snowflake playbooks for warehousing, ingestion, governance, performance, and cost
+- Databricks playbooks for notebooks, jobs, environments, assistant workflows, and delivery patterns
 - SQL articles for validation queries, transformations, and warehouse patterns
-- Data engineering notes for architecture, orchestration, and platform design
-- AI and automation notes for MCP, agent workflows, and model-serving patterns
+- Data engineering notes for architecture, orchestration, and cross-platform design
 
 ## Engineering principles
 
