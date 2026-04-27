@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "Use Docker for Local Snowflake and Databricks Development"
+title: "Use Docker for Local Databricks Development"
 categories: Databricks
-tags: Docker Snowflake Databricks Development DevOps Local-Development
+tags: Docker Databricks Development DevOps Local-Development
 author: Alan
-summary: "A reference pattern for using Docker to standardize local Snowflake and Databricks tooling, dependencies, and support services."
+summary: "A reference pattern for using Docker to standardize local Databricks tooling, dependencies, and support services."
 level: Beginner
 ---
 
 * content
 {:toc}
 
-Docker is useful for local Snowflake and Databricks work when you want reproducible tooling without depending on every laptop being configured the same way.
+Docker is useful for local Databricks support work when you want reproducible tooling without depending on every laptop being configured the same way.
 
 ## Common use cases
 
@@ -67,7 +67,7 @@ docker run -d --name redis-cache --network app-net redis:7
 docker run -d --name job-runner --network app-net python:3.12-slim sleep infinity
 ```
 
-This helps when a local Snowflake loader, Databricks helper service, or test harness needs nearby support services.
+This helps when a Databricks helper service, notebook utility, or test harness needs nearby support services.
 
 ## Notes
 

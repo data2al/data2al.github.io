@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Optimize Snowflake Performance With Warehouse and Storage Design"
-categories: ["Data Engineering"]
+categories: Snowflake
 tags: Snowflake Certification Performance Warehouses Clustering Micro-Partitions Cost-Optimization
 author: Alan
 summary: "A professional overview of how warehouse sizing, workload isolation, pruning, and storage-aware design affect Snowflake performance and cost."
 level: Advanced
-permalink: /data-engineering-solutions/optimize-snowflake-performance-with-warehouse-and-storage-design/
+permalink: /snowflake-playbooks/optimize-snowflake-performance-with-warehouse-and-storage-design/
 ---
 
 * content

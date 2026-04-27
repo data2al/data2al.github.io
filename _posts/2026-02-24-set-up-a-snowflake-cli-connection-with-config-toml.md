@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Set Up a Snowflake CLI Connection With config.toml"
-categories: ["Data Engineering"]
+categories: Snowflake
 tags: Snowflake Snowflake-CLI config.toml Connectivity DevOps CI-CD
 author: Alan
 summary: "A practical guide to defining a Snowflake CLI connection in config.toml, setting a default connection, and validating access locally or in CI/CD pipelines."
 level: Beginner
-permalink: /data-engineering-solutions/set-up-a-snowflake-cli-connection-with-config-toml/
+permalink: /snowflake-playbooks/set-up-a-snowflake-cli-connection-with-config-toml/
 ---
 
 * content

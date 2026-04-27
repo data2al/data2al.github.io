@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Estimate Cost Per Query in Snowflake With Better Cost Attribution"
-categories: ["Data Engineering"]
+categories: Snowflake
 tags: Snowflake Cost-Optimization FinOps Query-History Warehouses SQL
 author: Alan
 summary: "A practical way to estimate Snowflake cost per query by allocating actual hourly warehouse credits instead of relying on execution time alone."
 level: Advanced
-permalink: /data-engineering-solutions/estimate-cost-per-query-in-snowflake-with-better-cost-attribution/
+permalink: /snowflake-playbooks/estimate-cost-per-query-in-snowflake-with-better-cost-attribution/
 ---
 
 * content

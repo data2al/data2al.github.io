@@ -13,7 +13,7 @@ Reference queries for common warehouse and analytics engineering tasks.
 {% assign sorted_posts = site.posts | sort: "title" %}
 {% assign has_sql_posts = false %}
 {% for post in sorted_posts %}
-{% if post.tags contains "SQL" or post.categories contains "SQL" %}
+{% if post.categories contains "SQL" %}
 {% assign has_sql_posts = true %}
 - [{{ post.title }}]({{ post.url | prepend: site.baseurl }}){% if post.summary %}: {{ post.summary }}{% endif %}
 {% endif %}
@@ -27,3 +27,4 @@ Reference queries for common warehouse and analytics engineering tasks.
 - warehouse query patterns
 - data quality and validation checks
 - transformation examples for modeling and analytics engineering
+- SQL Server operations that belong with the SQL body of work

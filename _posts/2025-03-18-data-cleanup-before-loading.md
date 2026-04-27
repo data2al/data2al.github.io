@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "Clean Source Files Before Loading into Snowflake or Databricks"
+title: "Clean Source Files Before Loading into Snowflake"
 categories: Snowflake
-tags: Python Pandas Snowflake Databricks Ingestion
+tags: Python Pandas Snowflake Ingestion
 author: Alan
-summary: "A lightweight dataframe cleanup pattern for standardizing raw files before they land in Snowflake or Databricks."
+summary: "A lightweight dataframe cleanup pattern for standardizing raw files before they land in Snowflake."
 level: Beginner
 ---
 
 * content
 {:toc}
 
-Source files often arrive with inconsistent column names, duplicate business keys, and timestamps in mixed formats. A small cleanup layer before the load step prevents a lot of downstream rework in both Snowflake and Databricks.
+Source files often arrive with inconsistent column names, duplicate business keys, and timestamps in mixed formats. A small cleanup layer before the load step prevents a lot of downstream rework in Snowflake.
 
 ## Example
 
@@ -32,7 +32,7 @@ df["updated_at"] = pd.to_datetime(df["updated_at"], utc=True)
 
 ## Why it matters
 
-After cleanup, the dataset is easier to land in a Snowflake staging table or a Databricks bronze layer because:
+After cleanup, the dataset is easier to land in a Snowflake staging table because:
 
 - the schema is easier to reason about
 - load failures become easier to debug

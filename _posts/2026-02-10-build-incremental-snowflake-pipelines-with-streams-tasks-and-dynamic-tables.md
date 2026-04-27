@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Build Incremental Snowflake Pipelines With Streams, Tasks, and Dynamic Tables"
-categories: ["Data Engineering"]
+categories: Snowflake
 tags: Snowflake Certification Streams Tasks Dynamic-Tables Incremental-Pipelines
 author: Alan
 summary: "A directional guide to choosing between streams, tasks, and dynamic tables when designing refresh-aware transformation pipelines in Snowflake."
 level: Advanced
-permalink: /data-engineering-solutions/build-incremental-snowflake-pipelines-with-streams-tasks-and-dynamic-tables/
+permalink: /snowflake-playbooks/build-incremental-snowflake-pipelines-with-streams-tasks-and-dynamic-tables/
 ---
 
 * content

@@ -13,11 +13,16 @@ Practical Databricks notes covering notebooks, jobs, Python services, assistants
 ## Articles
 
 {% assign sorted_posts = site.posts | sort: "title" %}
+{% assign has_databricks_posts = false %}
 {% for post in sorted_posts %}
-{% if post.tags contains "Databricks" or post.categories contains "Databricks" %}
+{% if post.categories contains "Databricks" %}
+{% assign has_databricks_posts = true %}
 - [{{ post.title }}]({{ post.url | prepend: site.baseurl }}){% if post.summary %}: {{ post.summary }}{% endif %}
 {% endif %}
 {% endfor %}
+{% unless has_databricks_posts %}
+- No Databricks playbooks yet. This section is ready for future notes.
+{% endunless %}
 
 ## What belongs here
 

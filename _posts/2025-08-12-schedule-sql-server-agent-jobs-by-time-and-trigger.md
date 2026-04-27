@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Schedule SQL Server Agent Jobs by Time and Trigger"
-categories: ["Data Engineering"]
+categories: SQL
 tags: SQL-Server SQL-Agent Scheduling Automation Operations
 author: Alan
 summary: "A SQL Server Agent guide for time-based schedules, trigger-driven job starts, and separating scheduling from job logic."
 level: Intermediate
-permalink: /data-engineering-solutions/schedule-sql-server-agent-jobs-by-time-and-trigger/
+permalink: /sql-snippets/schedule-sql-server-agent-jobs-by-time-and-trigger/
 ---
 
 * content

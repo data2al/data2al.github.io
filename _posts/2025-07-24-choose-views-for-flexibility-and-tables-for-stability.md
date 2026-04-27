@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Choose Views for Flexibility and Tables for Stability"
-categories: ["Data Engineering"]
-tags: Data-Engineering SQL Views Tables Modeling Warehousing
+categories: SQL
+tags: SQL Views Tables Modeling Warehousing
 author: Alan
 summary: "A guide to how views support flexibility, how tables support stable outputs, and how both can be used in a pipeline."
 level: Beginner
-permalink: /data-engineering-solutions/choose-views-for-flexibility-and-tables-for-stability/
+permalink: /sql-snippets/choose-views-for-flexibility-and-tables-for-stability/
 ---
 
 * content

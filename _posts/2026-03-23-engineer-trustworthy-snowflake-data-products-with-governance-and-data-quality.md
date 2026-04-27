@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Engineer Trustworthy Snowflake Data Products With Governance and Data Quality"
-categories: ["Data Engineering"]
+categories: Snowflake
 tags: Snowflake Certification Governance Data-Quality Security Roles Masking
 author: Alan
 summary: "A directional article on why secure access design, data quality controls, and governed delivery are essential for Snowflake advanced data engineering work."
 level: Advanced
-permalink: /data-engineering-solutions/engineer-trustworthy-snowflake-data-products-with-governance-and-data-quality/
+permalink: /snowflake-playbooks/engineer-trustworthy-snowflake-data-products-with-governance-and-data-quality/
 ---
 
 * content

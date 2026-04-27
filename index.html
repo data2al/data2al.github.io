@@ -6,8 +6,8 @@ layout: default
     <div class="left">
         <section class="homepage-hero">
             <p class="eyebrow">Snowflake And Databricks</p>
-            <h1>Practical data engineering notes for Snowflake, Databricks, and warehouse SQL.</h1>
-            <p class="directory-intro">This site is organized like a technical portfolio: playbooks for Snowflake architecture, Databricks delivery patterns, and SQL examples that readers can reuse quickly.</p>
+            <h1>Practical notes for Snowflake, Databricks, and SQL.</h1>
+            <p class="directory-intro">This site is organized into three focused libraries: Snowflake platform playbooks, Databricks delivery patterns, and reusable SQL examples.</p>
 
             <div class="hero-metrics">
                 <div class="hero-metric">
@@ -17,7 +17,7 @@ layout: default
                 <div class="hero-metric">
                     {% assign snowflake_posts = 0 %}
                     {% for post in site.posts %}
-                    {% if post.tags contains "Snowflake" or post.categories contains "Snowflake" %}
+                    {% if post.categories contains "Snowflake" %}
                     {% assign snowflake_posts = snowflake_posts | plus: 1 %}
                     {% endif %}
                     {% endfor %}
@@ -27,7 +27,7 @@ layout: default
                 <div class="hero-metric">
                     {% assign databricks_posts = 0 %}
                     {% for post in site.posts %}
-                    {% if post.tags contains "Databricks" or post.categories contains "Databricks" %}
+                    {% if post.categories contains "Databricks" %}
                     {% assign databricks_posts = databricks_posts | plus: 1 %}
                     {% endif %}
                     {% endfor %}
@@ -42,7 +42,7 @@ layout: default
             <div class="directory-list">
                 <a class="directory-entry directory-entry-primary" href="{{ site.baseurl }}/snowflake-playbooks/">
                     <span class="directory-name">Snowflake Playbooks</span>
-                    <span class="directory-copy">Warehouse design, cost attribution, ingestion, governance, CLI setup, and production-ready Snowflake patterns.</span>
+                    <span class="directory-copy">Warehouse design, cost attribution, ingestion, governance, CLI setup, and Snowflake platform patterns.</span>
                 </a>
                 <a class="directory-entry directory-entry-primary" href="{{ site.baseurl }}/databricks-playbooks/">
                     <span class="directory-name">Databricks Playbooks</span>
@@ -50,15 +50,11 @@ layout: default
                 </a>
                 <a class="directory-entry" href="{{ site.baseurl }}/sql-snippets/">
                     <span class="directory-name">SQL Articles</span>
-                    <span class="directory-copy">Reusable SQL for deduping, validation, transformations, rankings, retention, and warehouse checks.</span>
-                </a>
-                <a class="directory-entry" href="{{ site.baseurl }}/data-engineering-solutions/">
-                    <span class="directory-name">Data Engineering Solutions</span>
-                    <span class="directory-copy">Cross-platform patterns for pipelines, orchestration, file movement, warehouse design, and operating models.</span>
+                    <span class="directory-copy">Reusable SQL for deduping, validation, transformations, rankings, retention, SQL Server, and warehouse checks.</span>
                 </a>
                 <a class="directory-entry" href="{{ site.baseurl }}/about/">
                     <span class="directory-name">About and Focus</span>
-                    <span class="directory-copy">A quick view of the platform problems, tools, and engineering principles that shape the content here.</span>
+                    <span class="directory-copy">A quick view of the Snowflake, Databricks, and SQL problems that shape the content here.</span>
                 </a>
             </div>
         </section>
@@ -66,12 +62,12 @@ layout: default
         <section class="homepage-featured">
             <p class="eyebrow">Featured Reads</p>
             <div class="featured-grid">
-                <a class="featured-card" href="{{ site.baseurl }}/2026/04/15/estimate-cost-per-query-in-snowflake-with-better-cost-attribution/">
+                <a class="featured-card" href="{{ site.baseurl }}/snowflake-playbooks/estimate-cost-per-query-in-snowflake-with-better-cost-attribution/">
                     <span class="featured-card-topic">Snowflake FinOps</span>
                     <strong>Estimate Cost Per Query in Snowflake With Better Cost Attribution</strong>
                     <span>Use warehouse history and query metadata to explain spend in language stakeholders understand.</span>
                 </a>
-                <a class="featured-card" href="{{ site.baseurl }}/2026/02/10/build-incremental-snowflake-pipelines-with-streams-tasks-and-dynamic-tables/">
+                <a class="featured-card" href="{{ site.baseurl }}/snowflake-playbooks/build-incremental-snowflake-pipelines-with-streams-tasks-and-dynamic-tables/">
                     <span class="featured-card-topic">Snowflake Pipelines</span>
                     <strong>Build Incremental Snowflake Pipelines With Streams, Tasks, and Dynamic Tables</strong>
                     <span>Show when each refresh pattern is the right operational choice.</span>
@@ -81,10 +77,10 @@ layout: default
                     <strong>Call Databricks Jobs from a Python Service</strong>
                     <span>Bridge internal services to notebook and workflow execution without manual handoffs.</span>
                 </a>
-                <a class="featured-card" href="{{ site.baseurl }}/2025/06/26/use-docker-to-run-services-and-edit-files-in-containers/">
-                    <span class="featured-card-topic">Local Platform Dev</span>
-                    <strong>Use Docker for Local Snowflake and Databricks Development</strong>
-                    <span>Keep local tooling reproducible while you build loaders, clients, and test harnesses.</span>
+                <a class="featured-card" href="{{ site.baseurl }}/sql-snippets/operate-sql-server-triggers-and-stored-procedures-safely/">
+                    <span class="featured-card-topic">SQL Server</span>
+                    <strong>Operate SQL Server Triggers and Stored Procedures Safely</strong>
+                    <span>Keep transaction-heavy SQL Server automation visible, controlled, and maintainable.</span>
                 </a>
             </div>
         </section>

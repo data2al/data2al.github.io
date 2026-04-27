@@ -8,7 +8,7 @@ type: page
 
 <a href="https://www.linkedin.com/in/alan-l-b8920b66"><img src="/img/profile.jpg" alt="Alan Luo profile photo"></a>
 
-I’m Alan, a data platform engineer focused on Snowflake, Databricks, and warehouse-first analytics engineering. This site is the public version of how I work: clear implementation notes, reusable platform patterns, and practical articles that help teams deliver reliable data products faster.
+I’m Alan, a data platform engineer focused on Snowflake, Databricks, and warehouse SQL. This site is the public version of how I work: clear implementation notes, reusable platform patterns, and practical articles that help teams deliver reliable data products faster.
 
 <section class="career-path">
   <p class="eyebrow">Progression</p>
@@ -55,7 +55,7 @@ I’m Alan, a data platform engineer focused on Snowflake, Databricks, and wareh
 
 - Snowflake warehouse design, cost control, and secure data delivery
 - Databricks notebooks, jobs, Python workflows, and lakehouse operating patterns
-- SQL and Python for production-grade data processing
+- SQL and Python for production-grade warehouse work
 - Warehouse modeling and analytics engineering
 - Reporting systems that support operational and business decisions
 
@@ -74,19 +74,18 @@ I’m Alan, a data platform engineer focused on Snowflake, Databricks, and wareh
 
 ## What this site is for
 
-The site is designed as a working reference rather than a traditional reverse-chronological blog. Its purpose is to collect:
+The site is designed as a focused working reference rather than a traditional reverse-chronological blog. Its purpose is to collect:
 
 - implementation patterns worth reusing
 - Snowflake and Databricks guidance that reads well as a portfolio
 - SQL snippets for common warehouse tasks
-- notes on tools, tradeoffs, and architecture decisions
+- notes on tools and tradeoffs inside those three areas
 
 ## How the content is organized
 
 - Snowflake playbooks for warehousing, ingestion, governance, performance, and cost
 - Databricks playbooks for notebooks, jobs, environments, assistant workflows, and delivery patterns
-- SQL articles for validation queries, transformations, and warehouse patterns
-- Data engineering notes for architecture, orchestration, and cross-platform design
+- SQL articles for validation queries, transformations, SQL Server, and warehouse patterns
 
 ## Engineering principles
 

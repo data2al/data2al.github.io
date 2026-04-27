@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Design Snowflake Ingestion Patterns for Latency, Scale, and Control"
-categories: ["Data Engineering"]
-tags: Snowflake Certification Ingestion Snowpipe COPY-Into Streaming Data-Engineering
+categories: Snowflake
+tags: Snowflake Certification Ingestion Snowpipe COPY-Into Streaming
 author: Alan
 summary: "A professional guide to choosing between batch loads, continuous ingestion, and streaming patterns in Snowflake for advanced data engineering scenarios."
 level: Advanced
-permalink: /data-engineering-solutions/design-snowflake-ingestion-patterns-for-latency-scale-and-control/
+permalink: /snowflake-playbooks/design-snowflake-ingestion-patterns-for-latency-scale-and-control/
 ---
 
 * content

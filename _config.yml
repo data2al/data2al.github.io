@@ -5,11 +5,6 @@ url: "https://www.data2al.com"
 
 permalink: /:year/:month/:day/:title/
 
-collections:
-  scribbles:
-    output: true
-    permalink: /scribbles/:title/
-
 github_username:  data2al
 linkedIn_username: alan-l-b8920b66
 email: alanluo@outlook.com

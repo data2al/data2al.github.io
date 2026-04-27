@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Operate SQL Server Triggers and Stored Procedures Safely"
-categories: ["Data Engineering"]
+categories: SQL
 tags: SQL-Server Stored-Procedures Triggers Operations
 author: Alan
 summary: "A practical SQL Server pattern for using triggers carefully and writing transaction-safe stored procedures."
 level: Intermediate
-permalink: /data-engineering-solutions/operate-sql-server-triggers-and-stored-procedures-safely/
+permalink: /sql-snippets/operate-sql-server-triggers-and-stored-procedures-safely/
 ---
 
 * content

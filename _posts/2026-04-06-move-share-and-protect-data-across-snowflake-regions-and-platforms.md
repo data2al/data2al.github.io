@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Move, Share, and Protect Data Across Snowflake Regions and Platforms"
-categories: ["Data Engineering"]
+categories: Snowflake
 tags: Snowflake Certification Replication Failover Data-Sharing Cross-Region Business-Continuity
 author: Alan
 summary: "A professional guide to understanding when to use data sharing, replication, or failover capabilities in Snowflake advanced data engineering scenarios."
 level: Advanced
-permalink: /data-engineering-solutions/move-share-and-protect-data-across-snowflake-regions-and-platforms/
+permalink: /snowflake-playbooks/move-share-and-protect-data-across-snowflake-regions-and-platforms/
 ---
 
 * content
