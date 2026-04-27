@@ -12,7 +12,7 @@ permalink: /data-engineering-lab/tune-pruning-clustering-and-search-optimization
 * content
 {:toc}
 
-Snowflake performance questions often test micro-partition pruning, clustering keys, query profile interpretation, and when search optimization is worth the cost. This lab creates data and walks through the syntax.
+Snowflake performance work often involves micro-partition pruning, clustering keys, query profile interpretation, and deciding when search optimization is worth the cost. This lab creates data and walks through the syntax.
 
 ## Step 1: Create the demo workspace
 
@@ -146,6 +146,6 @@ DROP DATABASE IF EXISTS PERF_LAB_DB;
 DROP WAREHOUSE IF EXISTS PERF_LAB_WH;
 ```
 
-## Certification focus
+## Operational focus
 
 Know that micro-partition pruning is automatic, clustering can improve pruning for large tables with useful filter patterns, search optimization targets selective lookups, and materialized views trade maintenance cost for repeated-query speed.

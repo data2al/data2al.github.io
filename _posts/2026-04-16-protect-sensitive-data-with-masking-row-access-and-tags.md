@@ -184,6 +184,6 @@ DROP ROLE IF EXISTS GOVERNANCE_LAB_EAST_ANALYST;
 DROP ROLE IF EXISTS GOVERNANCE_LAB_WEST_ANALYST;
 ```
 
-## Certification focus
+## Operational focus
 
-Masking policies protect column values. Row access policies filter rows. Tags classify objects and columns. On the exam, pay close attention to whether the requirement is column-level security, row-level security, metadata classification, or all three.
+Masking policies protect column values. Row access policies filter rows. Tags classify objects and columns. Pay close attention to whether the requirement is column-level security, row-level security, metadata classification, or all three.

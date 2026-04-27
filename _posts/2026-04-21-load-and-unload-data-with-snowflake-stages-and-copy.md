@@ -205,9 +205,9 @@ DROP DATABASE IF EXISTS COPY_LAB_DB;
 DROP WAREHOUSE IF EXISTS COPY_LAB_WH;
 ```
 
-## Certification focus
+## Operational focus
 
-For the data engineering exam, know when to use:
+For Snowflake data engineering work, know when to use:
 
 - stages for file landing zones
 - file formats for parsing rules

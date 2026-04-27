@@ -197,6 +197,6 @@ DROP DATABASE IF EXISTS SCRIPTING_LAB_DB;
 DROP WAREHOUSE IF EXISTS SCRIPTING_LAB_WH;
 ```
 
-## Certification focus
+## Operational focus
 
 Use procedures when orchestration needs validation, branching, logging, transactions, or error handling. Use plain SQL or tasks when the workflow is simple enough to remain declarative.

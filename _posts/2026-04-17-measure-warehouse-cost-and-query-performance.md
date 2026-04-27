@@ -12,7 +12,7 @@ permalink: /data-engineering-lab/measure-warehouse-cost-and-query-performance/
 * content
 {:toc}
 
-Snowflake data engineering exams often ask you to choose warehouse sizes, isolate workloads, and diagnose cost or performance issues. This lab creates a small workload and gives you the monitoring queries to inspect it.
+Managing Snowflake well often means choosing warehouse sizes, isolating workloads, and diagnosing cost or performance issues. This lab creates a small workload and gives you the monitoring queries to inspect it.
 
 ## Step 1: Create the demo workspace
 
@@ -178,6 +178,6 @@ DROP DATABASE IF EXISTS COST_LAB_DB;
 DROP WAREHOUSE IF EXISTS COST_LAB_WH;
 ```
 
-## Certification focus
+## Operational focus
 
 Know how auto-suspend, warehouse size, workload isolation, query history, and warehouse metering work together. For immediate troubleshooting, prefer `INFORMATION_SCHEMA`; for cost reporting, expect `ACCOUNT_USAGE`.

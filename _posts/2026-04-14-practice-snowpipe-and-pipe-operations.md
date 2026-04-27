@@ -4,7 +4,7 @@ title: "Practice Snowpipe and Pipe Operations"
 categories: [Data Engineering Lab]
 tags: Snowflake Snowpipe Pipes COPY Stages Loading
 author: Alan
-summary: "A runnable lab for creating a pipe definition, staging sample data, practicing COPY validation, inspecting pipe metadata, and understanding auto-ingest exam concepts."
+summary: "A runnable lab for creating a pipe definition, staging sample data, practicing COPY validation, inspecting pipe metadata, and understanding auto-ingest operations."
 level: Intermediate
 permalink: /data-engineering-lab/practice-snowpipe-and-pipe-operations/
 ---
@@ -115,7 +115,7 @@ The pipe stores the `COPY INTO` statement Snowpipe uses when files arrive.
 ```sql
 CREATE OR REPLACE PIPE RAW.EVENT_PIPE
   AUTO_INGEST = FALSE
-  COMMENT = 'Demo pipe for Snowpipe certification practice.'
+  COMMENT = 'Demo pipe for Snowpipe operations practice.'
 AS
 COPY INTO RAW.EVENT_LANDING (
   EVENT_ID,
@@ -170,7 +170,7 @@ ORDER BY LAST_LOAD_TIME DESC;
 
 ## Step 8: Know the auto-ingest shape
 
-This is the cloud-notification pattern to recognize on the exam. Do not run it unless your account has the notification integration configured.
+This is the cloud-notification pattern used for auto-ingest. Do not run it unless your account has the notification integration configured.
 
 ```sql
 -- Example shape only.
@@ -190,6 +190,6 @@ DROP DATABASE IF EXISTS SNOWPIPE_LAB_DB;
 DROP WAREHOUSE IF EXISTS SNOWPIPE_LAB_WH;
 ```
 
-## Certification focus
+## Operational focus
 
 Know the difference between bulk `COPY INTO`, a pipe definition, Snowpipe auto-ingest, notification integrations, pipe metadata, load history, and error-handling choices such as `ON_ERROR`.

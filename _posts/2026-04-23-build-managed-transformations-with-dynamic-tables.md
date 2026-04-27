@@ -229,9 +229,9 @@ DROP DATABASE IF EXISTS DYNAMIC_TABLE_LAB_DB;
 DROP WAREHOUSE IF EXISTS DYNAMIC_TABLE_LAB_WH;
 ```
 
-## Certification focus
+## Operational focus
 
-For the data engineering exam, know:
+For Snowflake data engineering work, know:
 
 - dynamic tables maintain query results according to target lag
 - tasks give explicit orchestration control, while dynamic tables manage refresh

@@ -210,9 +210,9 @@ DROP DATABASE IF EXISTS JSON_LAB_DB;
 DROP WAREHOUSE IF EXISTS JSON_LAB_WH;
 ```
 
-## Certification focus
+## Operational focus
 
-For the data engineering exam, know:
+For Snowflake data engineering work, know:
 
 - when to store source data as `VARIANT`
 - how to use `PARSE_JSON`

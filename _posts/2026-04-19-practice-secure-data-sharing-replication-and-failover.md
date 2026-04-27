@@ -12,7 +12,7 @@ permalink: /data-engineering-lab/practice-secure-data-sharing-replication-and-fa
 * content
 {:toc}
 
-Secure sharing and replication show up in certification scenarios about cross-account collaboration, cross-region availability, and governed data products. Some steps require multiple accounts or Snowflake editions, but the local share objects and data product patterns are runnable.
+Secure sharing and replication matter for cross-account collaboration, cross-region availability, and governed data products. Some steps require multiple accounts or Snowflake editions, but the local share objects and data product patterns are runnable.
 
 ## Step 1: Create the demo workspace
 
@@ -73,7 +73,7 @@ ORDER BY MONTH_DATE, REGION;
 
 ```sql
 CREATE OR REPLACE SHARE SHARE_LAB_REVENUE_SHARE
-  COMMENT = 'Demo secure share for Snowflake certification practice.';
+  COMMENT = 'Demo secure share for Snowflake sharing practice.';
 
 GRANT USAGE ON DATABASE SHARE_LAB_DB TO SHARE SHARE_LAB_REVENUE_SHARE;
 GRANT USAGE ON SCHEMA SHARE_LAB_DB.PRODUCT TO SHARE SHARE_LAB_REVENUE_SHARE;
@@ -128,6 +128,6 @@ DROP DATABASE IF EXISTS SHARE_LAB_DB;
 DROP WAREHOUSE IF EXISTS SHARE_LAB_WH;
 ```
 
-## Certification focus
+## Operational focus
 
 Secure shares expose database objects without copying data. Secure views are common for governed shares. Replication and failover are for availability and cross-region recovery, not normal query acceleration.

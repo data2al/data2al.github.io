@@ -12,7 +12,7 @@ permalink: /data-engineering-lab/secure-snowflake-access-with-roles-and-future-g
 * content
 {:toc}
 
-Snowflake certification questions often test whether you understand role hierarchy, object privileges, future grants, and schema ownership. This lab creates demo roles and objects, then shows the grants that would support a simple raw-to-mart pipeline.
+Snowflake access design depends on understanding role hierarchy, object privileges, future grants, and schema ownership. This lab creates demo roles and objects, then shows the grants that would support a simple raw-to-mart pipeline.
 
 ## Step 1: Create the demo workspace
 
@@ -145,6 +145,6 @@ DROP ROLE IF EXISTS RBAC_LAB_TRANSFORMER;
 DROP ROLE IF EXISTS RBAC_LAB_ANALYST;
 ```
 
-## Certification focus
+## Operational focus
 
-Know how database, schema, table, warehouse, and future grants work together. Expect scenario questions where a role can see a database but cannot query a table because it lacks schema `USAGE` or table `SELECT`.
+Know how database, schema, table, warehouse, and future grants work together. A common operational issue is a role that can see a database but cannot query a table because it lacks schema `USAGE` or table `SELECT`.

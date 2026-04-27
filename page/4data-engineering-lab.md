@@ -28,6 +28,6 @@ Runnable Snowflake data engineering labs with sample data, step-by-step scripts,
 
 ## What belongs here
 
-- runnable Snowflake certification labs
+- runnable Snowflake platform labs
 - ingestion, transformation, task, dynamic table, and monitoring workflows
 - sample data that can be created directly from SQL worksheets
