@@ -1,0 +1,150 @@
+---
+layout: post
+title: "Secure Snowflake Access With Roles and Future Grants"
+categories: [Data Engineering Lab]
+tags: Snowflake RBAC Roles Grants Managed-Access
+author: Alan
+summary: "A runnable lab for creating roles, schemas, tables, grants, future grants, and managed access patterns used in Snowflake data engineering."
+level: Intermediate
+permalink: /data-engineering-lab/secure-snowflake-access-with-roles-and-future-grants/
+---
+
+* content
+{:toc}
+
+Snowflake certification questions often test whether you understand role hierarchy, object privileges, future grants, and schema ownership. This lab creates demo roles and objects, then shows the grants that would support a simple raw-to-mart pipeline.
+
+## Step 1: Create the demo workspace
+
+```sql
+USE ROLE ACCOUNTADMIN;
+
+CREATE WAREHOUSE IF NOT EXISTS RBAC_LAB_WH
+  WAREHOUSE_SIZE = XSMALL
+  AUTO_SUSPEND = 60
+  AUTO_RESUME = TRUE
+  INITIALLY_SUSPENDED = TRUE;
+
+CREATE DATABASE IF NOT EXISTS RBAC_LAB_DB;
+CREATE SCHEMA IF NOT EXISTS RBAC_LAB_DB.RAW;
+CREATE SCHEMA IF NOT EXISTS RBAC_LAB_DB.MART;
+
+USE WAREHOUSE RBAC_LAB_WH;
+USE DATABASE RBAC_LAB_DB;
+```
+
+## Step 2: Create demo roles
+
+```sql
+CREATE ROLE IF NOT EXISTS RBAC_LAB_LOADER;
+CREATE ROLE IF NOT EXISTS RBAC_LAB_TRANSFORMER;
+CREATE ROLE IF NOT EXISTS RBAC_LAB_ANALYST;
+
+GRANT ROLE RBAC_LAB_LOADER TO ROLE SYSADMIN;
+GRANT ROLE RBAC_LAB_TRANSFORMER TO ROLE SYSADMIN;
+GRANT ROLE RBAC_LAB_ANALYST TO ROLE SYSADMIN;
+```
+
+## Step 3: Create sample tables
+
+```sql
+CREATE OR REPLACE TABLE RAW.CUSTOMER_EVENTS (
+  EVENT_ID NUMBER,
+  CUSTOMER_ID NUMBER,
+  EVENT_TYPE STRING,
+  EVENT_TS TIMESTAMP_NTZ
+);
+
+INSERT INTO RAW.CUSTOMER_EVENTS
+SELECT * FROM VALUES
+  (1, 101, 'signup', '2026-04-01 09:00:00'::TIMESTAMP_NTZ),
+  (2, 101, 'purchase', '2026-04-02 11:30:00'::TIMESTAMP_NTZ),
+  (3, 102, 'signup', '2026-04-03 10:15:00'::TIMESTAMP_NTZ)
+AS v (EVENT_ID, CUSTOMER_ID, EVENT_TYPE, EVENT_TS);
+
+CREATE OR REPLACE TABLE MART.CUSTOMER_ACTIVITY AS
+SELECT
+  CUSTOMER_ID,
+  COUNT(*) AS EVENT_COUNT,
+  MAX(EVENT_TS) AS LAST_EVENT_TS
+FROM RAW.CUSTOMER_EVENTS
+GROUP BY CUSTOMER_ID;
+```
+
+## Step 4: Grant least-privilege access
+
+```sql
+GRANT USAGE ON WAREHOUSE RBAC_LAB_WH TO ROLE RBAC_LAB_LOADER;
+GRANT USAGE ON WAREHOUSE RBAC_LAB_WH TO ROLE RBAC_LAB_TRANSFORMER;
+GRANT USAGE ON WAREHOUSE RBAC_LAB_WH TO ROLE RBAC_LAB_ANALYST;
+
+GRANT USAGE ON DATABASE RBAC_LAB_DB TO ROLE RBAC_LAB_LOADER;
+GRANT USAGE ON DATABASE RBAC_LAB_DB TO ROLE RBAC_LAB_TRANSFORMER;
+GRANT USAGE ON DATABASE RBAC_LAB_DB TO ROLE RBAC_LAB_ANALYST;
+
+GRANT USAGE ON SCHEMA RBAC_LAB_DB.RAW TO ROLE RBAC_LAB_LOADER;
+GRANT USAGE ON SCHEMA RBAC_LAB_DB.RAW TO ROLE RBAC_LAB_TRANSFORMER;
+GRANT USAGE ON SCHEMA RBAC_LAB_DB.MART TO ROLE RBAC_LAB_TRANSFORMER;
+GRANT USAGE ON SCHEMA RBAC_LAB_DB.MART TO ROLE RBAC_LAB_ANALYST;
+
+GRANT INSERT, SELECT ON TABLE RBAC_LAB_DB.RAW.CUSTOMER_EVENTS TO ROLE RBAC_LAB_LOADER;
+GRANT SELECT ON TABLE RBAC_LAB_DB.RAW.CUSTOMER_EVENTS TO ROLE RBAC_LAB_TRANSFORMER;
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE RBAC_LAB_DB.MART.CUSTOMER_ACTIVITY TO ROLE RBAC_LAB_TRANSFORMER;
+GRANT SELECT ON TABLE RBAC_LAB_DB.MART.CUSTOMER_ACTIVITY TO ROLE RBAC_LAB_ANALYST;
+```
+
+## Step 5: Add future grants
+
+Future grants reduce manual work when new tables are created.
+
+```sql
+GRANT SELECT ON FUTURE TABLES IN SCHEMA RBAC_LAB_DB.RAW TO ROLE RBAC_LAB_TRANSFORMER;
+GRANT SELECT ON FUTURE TABLES IN SCHEMA RBAC_LAB_DB.MART TO ROLE RBAC_LAB_ANALYST;
+```
+
+Create a new table and verify the future grant.
+
+```sql
+CREATE OR REPLACE TABLE MART.CUSTOMER_SEGMENTS (
+  CUSTOMER_ID NUMBER,
+  SEGMENT_NAME STRING
+);
+
+SHOW GRANTS ON TABLE MART.CUSTOMER_SEGMENTS;
+```
+
+## Step 6: Inspect grants
+
+```sql
+SHOW GRANTS TO ROLE RBAC_LAB_LOADER;
+SHOW GRANTS TO ROLE RBAC_LAB_TRANSFORMER;
+SHOW GRANTS TO ROLE RBAC_LAB_ANALYST;
+
+SHOW FUTURE GRANTS IN SCHEMA RBAC_LAB_DB.MART;
+```
+
+## Step 7: Practice managed access syntax
+
+Managed access schemas centralize grant management with the schema owner. This command is included for syntax recognition; run it only if you want to create a separate managed schema.
+
+```sql
+CREATE SCHEMA IF NOT EXISTS RBAC_LAB_DB.SECURE_MART
+  WITH MANAGED ACCESS;
+
+SHOW SCHEMAS LIKE 'SECURE_MART' IN DATABASE RBAC_LAB_DB;
+```
+
+## Step 8: Clean up
+
+```sql
+DROP DATABASE IF EXISTS RBAC_LAB_DB;
+DROP WAREHOUSE IF EXISTS RBAC_LAB_WH;
+
+DROP ROLE IF EXISTS RBAC_LAB_LOADER;
+DROP ROLE IF EXISTS RBAC_LAB_TRANSFORMER;
+DROP ROLE IF EXISTS RBAC_LAB_ANALYST;
+```
+
+## Certification focus
+
+Know how database, schema, table, warehouse, and future grants work together. Expect scenario questions where a role can see a database but cannot query a table because it lacks schema `USAGE` or table `SELECT`.

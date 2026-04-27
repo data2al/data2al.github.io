@@ -13,7 +13,43 @@
     <loc>https://www.data2al.com/sql-snippets/</loc>
   </url>
   <url>
+    <loc>https://www.data2al.com/data-engineering-lab/</loc>
+  </url>
+  <url>
     <loc>https://www.data2al.com/databricks-playbooks/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/data-engineering-lab/load-and-unload-data-with-snowflake-stages-and-copy/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/data-engineering-lab/practice-snowpipe-and-pipe-operations/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/data-engineering-lab/secure-snowflake-access-with-roles-and-future-grants/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/data-engineering-lab/protect-sensitive-data-with-masking-row-access-and-tags/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/data-engineering-lab/measure-warehouse-cost-and-query-performance/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/data-engineering-lab/tune-pruning-clustering-and-search-optimization/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/data-engineering-lab/practice-secure-data-sharing-replication-and-failover/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/data-engineering-lab/control-pipelines-with-snowflake-scripting-procedures/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/data-engineering-lab/query-semi-structured-json-with-variant-and-flatten/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/data-engineering-lab/build-managed-transformations-with-dynamic-tables/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/data-engineering-lab/create-schedule-manage-and-monitor-snowflake-tasks/</loc>
   </url>
   <url>
     <loc>https://www.data2al.com/reference-index/</loc>
