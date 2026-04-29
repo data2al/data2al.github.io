@@ -6,7 +6,7 @@ icon: star
 type: page
 ---
 
-<a href="https://www.linkedin.com/in/alan-l-b8920b66"><img src="/img/profile.jpg" alt="Alan Luo profile photo"></a>
+<a href="https://www.linkedin.com/in/alan-l-b8920b66"><img src="/img/profile.jpg" alt="Alan Luo profile photo" width="240" height="240" loading="lazy" decoding="async"></a>
 
 I’m Alan, a data platform engineer focused on Snowflake, Databricks, and warehouse SQL. This site is the public version of how I work: clear implementation notes, reusable platform patterns, and practical articles that help teams deliver reliable data products faster.
 

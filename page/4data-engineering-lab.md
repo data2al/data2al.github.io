@@ -10,6 +10,8 @@ topic_label: Data Engineering Lab
 
 Runnable Snowflake data engineering labs with sample data, step-by-step scripts, and cleanup sections.
 
+Looking for Snowflake AI, ML, and Gen AI labs? See the [AI/Data Science Lab]({{ site.baseurl }}/ai-data-science-lab/).
+
 ## Articles
 
 <ul>

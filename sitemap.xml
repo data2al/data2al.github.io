@@ -16,6 +16,45 @@
     <loc>https://www.data2al.com/data-engineering-lab/</loc>
   </url>
   <url>
+    <loc>https://www.data2al.com/ai-data-science-lab/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/ai-data-science-lab/build-a-snowflake-feature-engineering-lab-for-churn-models/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/ai-data-science-lab/build-a-snowflake-feature-store-lab-for-reusable-ml-features/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/ai-data-science-lab/train-and-register-a-snowpark-ml-classification-model/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/ai-data-science-lab/run-an-end-to-end-snowflake-notebook-experiment/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/ai-data-science-lab/use-cortex-llm-functions-for-support-triage/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/ai-data-science-lab/build-a-rag-workflow-with-cortex-embeddings/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/ai-data-science-lab/build-a-cortex-analyst-semantic-model-lab/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/ai-data-science-lab/govern-and-evaluate-gen-ai-outputs-in-snowflake/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/ai-data-science-lab/monitor-model-drift-and-retraining-signals-in-snowflake/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/ai-data-science-lab/run-time-series-forecasting-checks-in-snowflake/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/ai-data-science-lab/deploy-open-source-model-workflows-with-snowpark-container-services/</loc>
+  </url>
+  <url>
+    <loc>https://www.data2al.com/ai-data-science-lab/extract-structured-fields-from-documents-with-cortex/</loc>
+  </url>
+  <url>
     <loc>https://www.data2al.com/databricks-playbooks/</loc>
   </url>
   <url>

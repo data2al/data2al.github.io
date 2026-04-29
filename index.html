@@ -17,7 +17,7 @@ layout: default
                 <div class="hero-metric">
                     {% assign snowflake_posts = 0 %}
                     {% for post in site.posts %}
-                    {% if post.categories contains "Snowflake" %}
+                    {% if post.categories contains "Snowflake" or post.categories contains "Data Engineering Lab" or post.categories contains "AI/Data Science Lab" %}
                     {% assign snowflake_posts = snowflake_posts | plus: 1 %}
                     {% endif %}
                     {% endfor %}
@@ -55,6 +55,10 @@ layout: default
                 <a class="directory-entry" href="{{ site.baseurl }}/data-engineering-lab/">
                     <span class="directory-name">Data Engineering Lab</span>
                     <span class="directory-copy">Runnable Snowflake labs for ingestion, transformation, scheduling, monitoring, and platform operations.</span>
+                </a>
+                <a class="directory-entry" href="{{ site.baseurl }}/ai-data-science-lab/">
+                    <span class="directory-name">AI/Data Science Lab</span>
+                    <span class="directory-copy">Runnable Snowflake labs for data science, Cortex AI, LLMs, model lifecycle, governance, and Gen AI patterns.</span>
                 </a>
                 <a class="directory-entry" href="{{ site.baseurl }}/about/">
                     <span class="directory-name">About and Focus</span>
