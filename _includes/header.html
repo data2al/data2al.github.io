@@ -65,6 +65,15 @@
                         <i class="fa fa-user-o"></i>About
                     </a>
                 </li>
+                <li>
+                    {% if page.url == '/focus/' %}
+                    <a class="active" href="{{site.baseurl}}/focus/">
+                    {% else %}
+                    <a href="{{site.baseurl}}/focus/">
+                    {% endif %}
+                        <i class="fa fa-clock-o"></i>Focus
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
