@@ -1,5 +1,8 @@
 .focus-page {
-    width: min(1140px, 92vw);
+    display: grid;
+    align-items: center;
+    width: min(760px, 92vw);
+    min-height: calc(100vh - 220px);
     margin: 42px auto 0;
 }
 
@@ -8,33 +11,11 @@
     gap: 22px;
 }
 
-.focus-hero {
-    padding: 32px;
-    border-radius: var(--radius);
-    background:
-        radial-gradient(circle at top left, rgba(102, 226, 199, 0.18), transparent 34%),
-        linear-gradient(135deg, #07111f, #10233c 62%, #12385f);
-    box-shadow: var(--shadow);
-}
-
-.focus-hero h1 {
-    margin-bottom: 10px;
-    color: #ffffff;
-    font-size: clamp(2.2rem, 4vw, 4.8rem);
-}
-
-.focus-hero p:last-child {
-    max-width: 680px;
-    color: #cbd5e1;
-    font-size: 1.08rem;
-}
-
 .focus-workspace {
     display: block;
 }
 
-.focus-timer-panel,
-.focus-task-section {
+.focus-timer-panel {
     border: 1px solid rgba(148, 163, 184, 0.16);
     border-radius: var(--radius);
     background: rgba(10, 19, 35, 0.82);
@@ -43,11 +24,11 @@
 
 .focus-timer-panel {
     display: flex;
-    min-height: 430px;
+    min-height: 520px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    padding: 34px;
 }
 
 .focus-mode-tabs {
@@ -78,15 +59,8 @@
     color: #ffffff;
 }
 
-.focus-current-task {
-    min-height: 28px;
-    color: var(--warm);
-    font-size: 0.95rem;
-    font-weight: 700;
-}
-
 .focus-time {
-    margin: 8px 0 22px;
+    margin: 0 0 22px;
     color: #ffffff;
     font-family: "IBM Plex Mono", Consolas, monospace;
     font-size: clamp(4.8rem, 13vw, 9.5rem);
@@ -216,151 +190,13 @@
     background: rgba(15, 23, 42, 0.72);
 }
 
-.focus-task-form label {
-    display: grid;
-    gap: 7px;
-    min-width: 0;
-    color: #cbd5e1;
-    font-size: 0.84rem;
-    font-weight: 800;
-}
-
-.focus-task-form input {
-    box-sizing: border-box;
-    width: 100%;
-    min-width: 0;
-    min-height: 46px;
-    padding: 0 14px;
-    border: 1px solid rgba(148, 163, 184, 0.18);
-    border-radius: 12px;
-    background: rgba(15, 23, 42, 0.68);
-    color: #ffffff;
-    font: inherit;
-}
-
-.focus-task-form input:focus {
-    outline: none;
-    border-color: rgba(102, 226, 199, 0.45);
-    box-shadow: 0 0 0 3px rgba(102, 226, 199, 0.08);
-}
-
-.focus-task-section {
-    padding: 28px;
-}
-
-.focus-section-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 18px;
-}
-
-.focus-section-head h2 {
-    margin: 0;
-    color: #ffffff;
-    font-size: clamp(1.6rem, 2vw, 2.2rem);
-}
-
-.focus-task-form {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) max-content;
-    gap: 12px;
-    align-items: end;
-    margin-bottom: 18px;
-}
-
-.focus-task-list {
-    display: grid;
-    gap: 12px;
-}
-
-.focus-task-item {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    gap: 12px;
-    align-items: center;
-    padding: 14px;
-    border: 1px solid rgba(148, 163, 184, 0.14);
-    border-radius: 16px;
-    background: rgba(15, 23, 42, 0.55);
-}
-
-.focus-task-item.is-active {
-    border-color: rgba(102, 226, 199, 0.44);
-    background: rgba(102, 226, 199, 0.09);
-}
-
-.focus-task-item.is-done {
-    opacity: 0.62;
-}
-
-.focus-task-check {
-    width: 22px;
-    height: 22px;
-    accent-color: var(--accent);
-}
-
-.focus-task-title {
-    display: block;
-    color: #ffffff;
-    font-weight: 800;
-    line-height: 1.35;
-    word-break: break-word;
-}
-
-.focus-task-meta {
-    display: block;
-    margin-top: 3px;
-    color: #94a3b8;
-    font-size: 0.84rem;
-}
-
-.focus-task-actions {
-    display: flex;
-    gap: 8px;
-}
-
-.focus-task-mini {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: 1px solid rgba(148, 163, 184, 0.16);
-    border-radius: 12px;
-    background: rgba(15, 23, 42, 0.74);
-    color: #e2e8f0;
-    cursor: pointer;
-}
-
-.focus-task-mini:hover {
-    border-color: rgba(102, 226, 199, 0.35);
-    color: var(--accent);
-}
-
-.focus-task-empty,
-.focus-task-summary {
-    padding: 16px 0 0;
-    color: #94a3b8;
-}
-
-.focus-task-summary {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    font-size: 0.92rem;
-}
-
 @media screen and (max-width: 640px) {
     .focus-page {
         width: 94%;
         margin-top: 24px;
     }
 
-    .focus-hero,
-    .focus-timer-panel,
-    .focus-task-section {
+    .focus-timer-panel {
         padding: 20px 16px;
         border-radius: 20px;
     }
@@ -372,22 +208,5 @@
 
     .focus-mode {
         width: 100%;
-    }
-
-    .focus-task-form {
-        grid-template-columns: 1fr;
-    }
-
-    .focus-section-head {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .focus-task-item {
-        grid-template-columns: auto minmax(0, 1fr) auto;
-    }
-
-    .focus-task-actions {
-        grid-column: 2 / -1;
     }
 }

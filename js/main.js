@@ -363,7 +363,9 @@
     }
 
     var active = getActiveTask()
-    currentTask.textContent = active ? active.title : 'No task selected'
+    if (currentTask) {
+      currentTask.textContent = active ? active.title : 'No task selected'
+    }
     toggleButton.innerHTML = running
       ? '<i class="fa fa-pause" aria-hidden="true"></i><span>Pause</span>'
       : '<i class="fa fa-play" aria-hidden="true"></i><span>Start</span>'
@@ -386,6 +388,11 @@
   }
 
   function renderTasks() {
+    if (!taskList || !taskSummary) {
+      renderTimer()
+      return
+    }
+
     if (!state.tasks.length) {
       taskList.innerHTML = '<div class="focus-task-empty">No tasks yet.</div>'
       taskSummary.textContent = ''
@@ -636,88 +643,90 @@
 
   resetButton.addEventListener('click', resetTimer)
 
-  taskForm.addEventListener('submit', function(event) {
-    event.preventDefault()
+  if (taskForm && taskTitle && taskList && clearDone) {
+    taskForm.addEventListener('submit', function(event) {
+      event.preventDefault()
 
-    var title = taskTitle.value.trim()
+      var title = taskTitle.value.trim()
 
-    if (!title) {
-      return
-    }
-
-    var task = {
-      id: String(Date.now()),
-      title: title,
-      done: false
-    }
-
-    state.tasks.unshift(task)
-    state.activeTaskId = task.id
-    taskTitle.value = ''
-    saveState()
-    renderTasks()
-  })
-
-  taskList.addEventListener('click', function(event) {
-    var item = findTaskElement(event.target)
-
-    if (!item) {
-      return
-    }
-
-    var id = item.getAttribute('data-task-id')
-    var task = findTask(id)
-
-    if (!task) {
-      return
-    }
-
-    if (event.target.closest('[data-task-toggle]')) {
-      task.done = !task.done
-    } else if (event.target.closest('[data-task-delete]')) {
-      state.tasks = state.tasks.filter(function(candidate) {
-        return candidate.id !== id
-      })
-      if (state.activeTaskId === id) {
-        state.activeTaskId = state.tasks.length ? state.tasks[0].id : null
+      if (!title) {
+        return
       }
-    } else if (!event.target.matches('[data-task-complete]')) {
-      state.activeTaskId = id
-    }
 
-    saveState()
-    renderTasks()
-  })
+      var task = {
+        id: String(Date.now()),
+        title: title,
+        done: false
+      }
 
-  taskList.addEventListener('change', function(event) {
-    if (!event.target.matches('[data-task-complete]')) {
-      return
-    }
-
-    var item = findTaskElement(event.target)
-    var task = item ? findTask(item.getAttribute('data-task-id')) : null
-
-    if (!task) {
-      return
-    }
-
-    task.done = event.target.checked
-    saveState()
-    renderTasks()
-  })
-
-  clearDone.addEventListener('click', function() {
-    state.tasks = state.tasks.filter(function(task) {
-      return !task.done
+      state.tasks.unshift(task)
+      state.activeTaskId = task.id
+      taskTitle.value = ''
+      saveState()
+      renderTasks()
     })
 
-    if (state.activeTaskId && !findTask(state.activeTaskId)) {
-      state.activeTaskId = state.tasks.length ? state.tasks[0].id : null
-    }
+    taskList.addEventListener('click', function(event) {
+      var item = findTaskElement(event.target)
 
-    saveState()
-    renderTasks()
-  })
+      if (!item) {
+        return
+      }
+
+      var id = item.getAttribute('data-task-id')
+      var task = findTask(id)
+
+      if (!task) {
+        return
+      }
+
+      if (event.target.closest('[data-task-toggle]')) {
+        task.done = !task.done
+      } else if (event.target.closest('[data-task-delete]')) {
+        state.tasks = state.tasks.filter(function(candidate) {
+          return candidate.id !== id
+        })
+        if (state.activeTaskId === id) {
+          state.activeTaskId = state.tasks.length ? state.tasks[0].id : null
+        }
+      } else if (!event.target.matches('[data-task-complete]')) {
+        state.activeTaskId = id
+      }
+
+      saveState()
+      renderTasks()
+    })
+
+    taskList.addEventListener('change', function(event) {
+      if (!event.target.matches('[data-task-complete]')) {
+        return
+      }
+
+      var item = findTaskElement(event.target)
+      var task = item ? findTask(item.getAttribute('data-task-id')) : null
+
+      if (!task) {
+        return
+      }
+
+      task.done = event.target.checked
+      saveState()
+      renderTasks()
+    })
+
+    clearDone.addEventListener('click', function() {
+      state.tasks = state.tasks.filter(function(task) {
+        return !task.done
+      })
+
+      if (state.activeTaskId && !findTask(state.activeTaskId)) {
+        state.activeTaskId = state.tasks.length ? state.tasks[0].id : null
+      }
+
+      saveState()
+      renderTasks()
+    })
+  }
 
   renderTasks()
 }());

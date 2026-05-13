@@ -8,12 +8,6 @@ type: page
 
 <main class="focus-page" data-focus-app>
   <section class="focus-shell">
-    <div class="focus-hero">
-      <p class="eyebrow">Local Workspace</p>
-      <h1>Focus Timer</h1>
-      <p>Plan a short work queue, run focused sessions, and keep everything saved in this browser.</p>
-    </div>
-
     <section class="focus-workspace" aria-label="Focus timer">
       <div class="focus-timer-panel">
         <div class="focus-mode-tabs" role="tablist" aria-label="Timer mode">
@@ -22,7 +16,6 @@ type: page
           <button class="focus-mode" type="button" data-mode="long">Long Break</button>
         </div>
 
-        <div class="focus-current-task" data-current-task>No task selected</div>
         <div class="focus-time" data-timer-display>25:00</div>
 
         <div class="focus-controls" aria-label="Timer controls">
@@ -71,33 +64,6 @@ type: page
             loading="lazy"></iframe>
         </div>
       </div>
-    </section>
-
-    <section class="focus-task-section" aria-label="Task manager">
-      <div class="focus-section-head">
-        <div>
-          <p class="eyebrow">Today</p>
-          <h2>Tasks</h2>
-        </div>
-        <button class="focus-text-button" type="button" data-clear-done>
-          <i class="fa fa-check-square-o" aria-hidden="true"></i>
-          <span>Clear done</span>
-        </button>
-      </div>
-
-      <form class="focus-task-form" data-task-form>
-        <label>
-          <span>Task</span>
-          <input type="text" data-task-title placeholder="What are you working on?" maxlength="90" required>
-        </label>
-        <button class="focus-control-button" type="submit">
-          <i class="fa fa-plus" aria-hidden="true"></i>
-          <span>Add</span>
-        </button>
-      </form>
-
-      <div class="focus-task-list" data-task-list></div>
-      <div class="focus-task-summary" data-task-summary></div>
     </section>
   </section>
 </main>
