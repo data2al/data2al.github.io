@@ -33,7 +33,7 @@ type: page
 
         <div class="focus-session-row" aria-live="polite">
           <span data-session-count>0</span>
-          <span>completed today</span>
+          <span>focus rounds finished today</span>
         </div>
 
         <div class="focus-music-panel">
